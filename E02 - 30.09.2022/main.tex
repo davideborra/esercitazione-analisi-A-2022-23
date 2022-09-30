@@ -926,6 +926,53 @@ ytick={-4.0,-2.0,...,8.0},]
         \end{minipage}}
         \[g\circ f=g(f(x))=\log(|f(x)|-1)\]
         Bisogna imporre che $|f(x)|-1>0$, il che si ha quando $x\in \R\setminus [-1,0]$.
+    \item Risolvere le seguenti equazioni \begin{enumerate}
+        \item $\sin(\arcsin(x+2))=\frac{x}{3}$
+        \item $\sin(\arcsin(x+2))=4x$
+    \end{enumerate}
+    \item[\textit{\large Soluzione~}]~
+        \begin{oss}
+            Il seno non è una funzione iniettiva, anzi, è periodica. Di conseguenza non è invertibile. Bisogna restringere il dominio e il codominio. Di conseguenza bisogna ricordarsi di riportare questa restrizione anche nelle equazioni.
+            $$-1\leq x+2 \leq 1 \Harr -3 \leq x\leq -1$$
+        \end{oss}
+            \[\sin(\arcsin(x+2))=x+2\]
+        \begin{enumerate}
+            \item \(x+2=\frac{x}{3}\Harr x=-3\in [-3,-1]\) Accetto.
+            \item \(x+2=4x\Harr x=\frac{2}{3}\notin [-3,-1]\) Non accetto: $ \nexists$ soluzine.
+        \end{enumerate}
+    \item Determinare per quali valori in $\N$ vale la proprietà $\mathcal{P}(n)="n!\geq5^{n-4}"$
+    \begin{proof}
+        \begin{itemize}
+            \item Dimostriamo che $\mathcal{P} (n)\Rightarrow  \mathcal{P} (n+1$):
+            \[(n+1)!=(n+1)n!\underset{\text{hp}}{\geq} (n+1)5^{n-4}=\frac{5}{5}(n+1)5^{n-4}=\frac{n+1}{5}5^{n-3}\underset{n\geq4}{\geq}5^{n-3} \]
+            \item Proviamo il passo base: $\mathcal{P} (4)= "4!=24\geq 5^0=1". (V)$. 
+            \item Nel caso, proviamo anche i casi con $n<4$.
+        \end{itemize}
+    \end{proof}
+
+    \item Sia $r_n=\underbrace{\sqrt{1+\sqrt{1+\dots}}}_{n\text{ volte}} ~~~\forall n\geq 2$. Dimostrare che $r_n\notin \Q$.
+    \begin{proof}
+        \begin{itemize}
+        \item (Passo base) $\sqrt{2}\notin \Q$ (V)
+        \item (Passo induttivo) Supponiamo che $r_n \notin \Q$, allora $r_{n+1}\notin \Q$. Si procede per assurdo. Supponiamo che $r_{n+1}\in \Q$, ovvero che $\exists a,b \in \N_{>0}: r_{n+1}=\frac{a}{b}$. Ci si accorge che $r_{n+1}=\sqrt{1+r_n}$, da cui $\\sqrt{1+r_n}=\frac{a}{b}$, da cui $r_n=\frac{a^2-b^2}{a^2}\in \Q$, assurdo.
+    \end{itemize}    
+    \end{proof}
+
+    \item Sia $\mathcal{P}(n)="n^3+5n \text{ è divisibile per }6"$. Dimostrare che vale $\forall n \in \N_{>0}$.
+    \begin{proof}
+        \begin{itemize}
+            \item (Passo base) $\mathcal{P(1)}="6\text{ è divisibile per }6"$
+            \item (Passo induttivo) Assumo che $\exists k \in \N : n^3+5^n=6k$.
+            \item \[(n+1)^3+5(n+1)=n^3+3n^2+3n+1+5n+5=6(k+1)+3(n^2+n)=\]
+            \begin{oss}
+                Si nota facilmente che $n^2+n=n(n+1)$, ovvero il prodotto di un naturale per il suo successivo, è sempre pari.
+            \end{oss}
+            \[6(k+1+\frac{n^2+n}{2})\]
+        \end{itemize}
+    \end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \item 
+%   \item[\textit{\large Soluzione~}]~
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{enumerate}
 \end{document}
