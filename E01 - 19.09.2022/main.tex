@@ -30,8 +30,8 @@ CdL in Matematica – a.a. 2022–2023}
         \item $A\cap C=A$, infatti se $P,R$ insiemi e $P\subseteq R$, allora $P\cap R=P$
         \item $A\cup B=[0,1]$
         \item $B^C=]-\infty,0[\cup[1,+\infty[$
-        \item $A\setminus B=\{x\in A \land x \notin B\}=A\cap B^C=\{1\}$
-        \item $A\triangle D=A\setminus D\cup D\setminus A=A\cup D \setminus A\cap D=\{0\}\cup \left\{\frac{1}{n}, n>0\right\}$
+        \item $A\setminus B=\{x\in A ~e~ x \notin B\}=A\cap B^C=\{1\}$
+        \item $A\triangle D=(A\setminus D)\cup (D\setminus A)=(A\cup D) \setminus (A\cap D)=\{0\}\cup \left\{\frac{1}{n}, n>0\right\}$
         \item $\mathcal{P}(D)=\{\varnothing, \{0\}, \{\frac{1}{2}\}, \{1\}, \{0, \frac{1}{2}\}, \{0,1\}, \{\frac{1}{2}, 1\}, D\}$
     \end{itemize}
     
@@ -51,14 +51,14 @@ CdL in Matematica – a.a. 2022–2023}
         %\label{fig:my_label}
     \end{figure}
     \item Formalizzare e negare la seguente proprietà: \say{Esiste un numero naturale $n$ tale che per ogni numero naturale $z$ si ha che se $z$ è diverso da $n$, allora $z$ è minore di $n$}. Verificare se tale proprietà è vera o falsa.
-    \item[\textit{\large Soluzione}]~ $\exists n\in \N :\forall z\in \N, z\neq \N\Rightarrow z<n~~~(F)$\\
-    La negazione è $\forall n\in \N\exists z \in \N :z\neq n\land z\geq n~~~(V)$
+    \item[\textit{\large Soluzione}]~ $\exists n\in \N ,\forall z\in \N:( z\neq \N\Rightarrow z<n)~~~(F)$\\
+    La negazione è $\forall n\in \N,\exists z \in \N :(z\neq n~e~ z\geq n)~~~(V)$ infatti basta fissare $n$ e scegliere $z=n+1$
     \item Data una proprietà $\mathcal{P}(x)$, formalizzare il fatto che esiste un unico $x$ che realizza $\mathcal{P}$ senza utilizzare il simbolo $\exists!$.
     \item[\textit{\large Soluzione~}]
-    $\exists x:\mathcal{P}(x)\land \forall y,(y\neq x\Rightarrow\lnot \mathcal{P}(x))$
+    $\exists x:\mathcal{P}(x)~e~ \forall y,(y\neq x\Rightarrow\lnot \mathcal{P}(x))$
     \item Negare e stabilire la veridicità della proprietà: \[\forall x,y \in \R,(y>x\Rightarrow \exists n \in \N: n x>y)\]
     \item[\textit{\large Soluzione}]
-    $\exists x,y \in \R:(y>x \land \forall n \in \N, nx\leq y)$
+    $\exists x,y \in \R:(y>x ~e~ \forall n \in \N, nx\leq y)$ (V), infatti basta scegliere $x=0$ e $y=1$.
     \item Rappresentare il grafico della funzione $f(x)=\ln(|x-3|)$, dopo averne determinato il dominio.
     \item[\textit{\large Soluzione~}] Dominio: $|x-3|>0 \Leftrightarrow x\neq 3$
     \begin{figure}[h]
@@ -82,11 +82,11 @@ CdL in Matematica – a.a. 2022–2023}
         \end{tikzpicture}
     \end{figure}
     \item Rappresentare il grafico di $f_\alpha (x)=x^\alpha$, dopo averne determinato il dominio, con \[\alpha \in \N_{\geq 0} \cup \left\{\frac{1}{n}, n \in \N_{>0}\right\}\]. Discutere iniettività e suriettività di $f_\alpha$.
-    \item[\textit{\large Soluzione~}] Se $\alpha \in \N \land \alpha \text{ pari}$ si tratta di una funzione potenza di grado pari, quindi né iniettiva né suriettiva. Se $\alpha$ dispari la funzione è una potenza di grado dispari, quindi sia iniettiva che suriettiva.\\
+    \item[\textit{\large Soluzione~}] Se $\alpha \in \N ~e~ \alpha \text{ pari}$ si tratta di una funzione potenza di grado pari, quindi né iniettiva né suriettiva. Se $\alpha$ dispari la funzione è una potenza di grado dispari, quindi sia iniettiva che suriettiva.\\
     Se $\alpha \in \left\{\frac{1}{n}, n \in \N_{>0}\right\}$, con $n$ pari, la funzione è una radice di indice pari, per cui è iniettiva ma non suriettiva. Se $n$ è dispari si tratta di una radice di indice dispari, quindi di una funzione iniettiva e suriettiva.
     \item Dimostrare che $f:\R\setminus \{0\}\to \R$ definita come \[f(x)=x+\frac{1}{x}\] non è iniettiva.
-    \item[\textit{\large Soluzione~}] \begin{proof}$f(x)$ è iniettiva $\Leftrightarrow \forall x,y f(x)=f(y)\Rightarrow x=y$, quindi:
-    \[x+\frac{1}{x}=y+\frac{1}{y}~~\Leftrightarrow~~x-y=\frac{1}{y}-\frac{1}{x}~~\Leftrightarrow~~x-y=\frac{x-y}{xy}\]
-    Questa uguaglianza è verificata se e solo se $xy=1$, quindi non solo per $x=y$. Di conseguenza la funzione non è iniettiva.\end{proof}
+    \begin{proof}$f(x)$ è iniettiva $\Leftrightarrow \forall x,y f(x)=f(y)\Rightarrow x=y$, quindi:
+    \[f(x)=f(y)~~\Leftrightarrow~~x+\frac{1}{x}=y+\frac{1}{y}~~\Leftrightarrow~~x-y=\frac{1}{y}-\frac{1}{x}~~\Leftrightarrow~~x-y=\frac{x-y}{xy}\]
+    Questa uguaglianza è verificata se e solo se $xy=1$ oppure $x=y$, quindi non solo per $x=y$. Di conseguenza la funzione non è iniettiva.\end{proof}
 \end{enumerate}
 \end{document}
