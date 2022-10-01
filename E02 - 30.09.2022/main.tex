@@ -5,7 +5,7 @@
 \everymath{\displaystyle}
 \title{Università degli Studi di Trento - Dipartimento di Matematica\\
 CdL in Matematica – a.a. 2022–2023\\ Note esercitazione}
-\author{Esercitatore: Simone Verzellesi\thanks{Trascrizione a cura di Davide Borra e Matilde Calabri}}
+\author{Esercitatore: Simone Verzellesi\thanks{Trascrizione a cura di Davide Borra}}
 \date{30 Settembre 2022}
 
 \begin{document}
@@ -24,24 +24,24 @@ CdL in Matematica – a.a. 2022–2023}
     \end{enumerate}
     \item[\textit{\large Soluzione~}]~
         \begin{enumerate}
-            \item Iniettività: $f(x)=f(y) \Leftrightarrow x=y\lor \underbrace{xy=1}_\text{non iniettiva}$
+            \item Iniettività: $f(x)=f(y) \Leftrightarrow x=y\text{ oppure } \underbrace{xy=1}_\text{non iniettiva}$
                 \\Suriettività: fissato un $y\in \R$ (codominio), dobbiamo verificare se esiste un $x\in \R\setminus\{0\}$ che verfica $y=f(x)$.
-                \[y=x+\frac{1}{x}\] \[x^2+1=xy\]
+                \[y=x+\frac{1}{x} \Leftrightarrow\] \[x^2+1=xy\]
                 Non ammette soluzioni per $y=0$. La funzione non è suriettiva.
                 \begin{lemma}[dei cassetti]
-                    Siano $A,B$ insiemi finiti e $f: A\to B$, allora $f$ è suriettiva se e solo se è iniettiva.
+                    Siano $A,B$ insiemi finiti tali che $|A|=|B|$ e $f: A\to B$, allora $f$ è suriettiva se e solo se è iniettiva.
                 \end{lemma}
 
-            \item Iniettività: \[\frac{1-x}{1+x}=\frac{1-y}{1+y}\]
-                \[\frac{1-x}{1+x}+\frac{y-1}{1+y}=0\]
-                \[\frac{1+y-x-xy+y-1+xy-x}{(1+x)(1+y)}=0\]
-                \[2\frac{y-x}{(1+x)(1+y)}=0\]
+            \item Iniettività: \[\frac{1-x}{1+x}=\frac{1-y}{1+y} \Leftrightarrow\]
+                \[\frac{1-x}{1+x}+\frac{y-1}{1+y}=0 \Leftrightarrow\]
+                \[\frac{1+y-x-xy+y-1+xy-x}{(1+x)(1+y)}=0 \Leftrightarrow\]
+                \[2\frac{y-x}{(1+x)(1+y)}=0 \Leftrightarrow\]
                 \[y=x\]
                 da cui $f(x)$ è iniettiva.
-            \\Suriettività: \[\frac{1-x}{1+x}=y\] \[1-x=y(1+x)\] \[1-x=y+xy\]\[1-y=x+xy\]\[1-y=x(1+y)\] \[\begin{array}{ll}\text{Se }y\neq -1 &\Rightarrow x=\frac{1-y}{1+y}\\\text{Se }y= -1 &\Rightarrow 2=0 \Leftrightarrow \nexists x \in \R\end{array}\]
+            \\Suriettività: \[\frac{1-x}{1+x}=y \Leftrightarrow\] \[1-x=y(1+x) \Leftrightarrow\] \[1-x=y+xy \Leftrightarrow\]\[1-y=x+xy \Leftrightarrow\]\[1-y=x(1+y) \] \[\begin{array}{ll}\text{Se }y\neq -1 &\Rightarrow  f(x)=y\Leftrightarrow x=\frac{1-y}{1+y}\\\text{Se }y= -1 &\Rightarrow f(x)=-1\Leftrightarrow 2=0 \Rightarrow \nexists x \in \R\end{array}\]
             \begin{oss}
                 Se restringo il codominio la funzione è suriettiva, quindi è anche biiettiva, per cui ammette inversa:
-                \[f^{-1}(x)=\frac{1-y}{1+y}\]
+                \[f^{-1}(x)=\frac{1-x}{1+x}\]
             \end{oss}
             \item Se $a=0, f(x)=b$, ovvero una retta orizzontale, né iniettiva né suriettiva.\\
                 Se $a\neq 0, f(x)=b$, si ha una funzione biiettiva.
@@ -51,7 +51,6 @@ CdL in Matematica – a.a. 2022–2023}
                 f(z)< 2 &\text{ se } z< 0\\
                 f(z)> 2 &\text{ se } z> 0\\
             \end{array}$ \end{oss}
-%%% DISEGNOZZO
 \InsertBoxR{1}{\begin{minipage}{0.3\linewidth}\centering
     \definecolor{qqqqff}{rgb}{0.,0.,1.}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm, scale = 0.3]
@@ -476,27 +475,27 @@ ytick={-4.0,-2.0,...,8.0},]
             Se $f(x)=f(y)$, si hanno tre casi:
             \begin{itemize}
                 \item $x=y=0$
-                \item $x,y<0, x+2=y+2 \Leftrightarrow x=y$
-                \item $x,y>0, \sqrt{x+4}=\sqrt{y+4} \Leftrightarrow x=y$
+                \item $x,y<0 \Rightarrow x+2=y+2 \Leftrightarrow x=y$
+                \item $x,y>0 \Rightarrow \sqrt{x+4}=\sqrt{y+4} \Leftrightarrow x=y$
             \end{itemize}
             Da cui la funzione è iniettiva
             \\Suriettività: 
-            sia $y\in \R$, se $y\leq 2$ \[x+2=y\Leftrightarrow x=\underbrace{y-2}_{\leq0}\]se $y> 2$ \[\sqrt{x+4}=y\Leftrightarrow x=\underbrace{y^2-4}_{\geq0}\]
+            sia $y\in \R$, se $y\leq 2$ \[x+2=y\Leftrightarrow x=\underbrace{y-2}_{\leq0}\]se $y> 2$ \[\sqrt{x+4}=y\Leftrightarrow x=\underbrace{y^2-4}_{>0}\]
             Allora la funzione è suriettiva.
         \end{enumerate}
         \item Siano $f:\R\to\R$ e $g:\R\setminus[-1,1]\to \R$ definite da \[f(x)=\begin{cases}
-            \sqrt{x+1}, &x\geq 1\\
-            x^2, &x<1
+            \sqrt{x+1}, & \text{se }x\geq 1\\
+            x^2, & \text{se }x<1
         \end{cases}~~~~~~g(x)=\log(|x|-1)\]
         Calcolare $f\circ g$ e $g\circ f$.
         \item[\textit{\large Soluzione~}]~ 
         \[f\circ g=f(g(x))=\begin{cases}
-            \sqrt{\log(|x|-1)+1}, & \log(|x|-1)\geq -1\\
-            \log^2(|x|-1), &\log(|x|-1)<-1
+            \sqrt{\log(|x|-1)+1}, & \text{se }\log(|x|-1)\geq -1\\
+            \log^2(|x|-1), & \text{se }\log(|x|-1)<-1
         \end{cases}\]
         Risolvo la disequazione $\log(|x|-1)+1\geq -1$
         \[|x|-1\geq\frac{1}{e}\]
-        \[x\leq -1-\frac{1}{e} \lor x\geq 1+\frac{1}{e}\]
+        \[x\leq -1-\frac{1}{e} \text{ oppure } x\geq 1+\frac{1}{e}\]
         Da cui 
         \[f\circ g=f(g(x))=\begin{cases}
             \sqrt{\log(|x|-1)+1}, & x \in ~\left]-\infty,-1-\frac{1}{e}\right]\cup \left[1+\frac{1}{e},+\infty\right[\\
@@ -924,8 +923,8 @@ ytick={-4.0,-2.0,...,8.0},]
                 \end{axis}
                 \end{tikzpicture}
         \end{minipage}}
-        \[g\circ f=g(f(x))=\log(|f(x)|-1)\]
-        Bisogna imporre che $|f(x)|-1>0$, il che si ha quando $x\in \R\setminus [-1,0]$.
+        \[g\circ f=g(f(x))=\log(|f(x)|-1)\overset{f(x)\geq0}{=}\log(f(x)-1) \]
+        Bisogna imporre $|f(x)|-1>0$, il che si ha quando $x\in \R\setminus [-1,0]$, quindi $f:\R\setminus [-1,0]\to \R$.
     \item Risolvere le seguenti equazioni \begin{enumerate}
         \item $\sin(\arcsin(x+2))=\frac{x}{3}$
         \item $\sin(\arcsin(x+2))=4x$
@@ -954,20 +953,20 @@ ytick={-4.0,-2.0,...,8.0},]
     \begin{proof}
         \begin{itemize}
         \item (Passo base) $\sqrt{2}\notin \Q$ (V)
-        \item (Passo induttivo) Supponiamo che $r_n \notin \Q$, allora $r_{n+1}\notin \Q$. Si procede per assurdo. Supponiamo che $r_{n+1}\in \Q$, ovvero che $\exists a,b \in \N_{>0}: r_{n+1}=\frac{a}{b}$. Ci si accorge che $r_{n+1}=\sqrt{1+r_n}$, da cui $\\sqrt{1+r_n}=\frac{a}{b}$, da cui $r_n=\frac{a^2-b^2}{a^2}\in \Q$, assurdo.
+        \item (Passo induttivo) Supponiamo che $r_n \notin \Q$ e dimostriamo che  $r_{n+1}\notin \Q$. Si procede per assurdo. Supponiamo che $r_{n+1}\in \Q$, ovvero che $\exists a,b \in \N_{>0}: r_{n+1}=\frac{a}{b}$. Ci si accorge che $r_{n+1}=\sqrt{1+r_n}$, da cui $\sqrt{1+r_n}=\frac{a}{b}$, da cui $r_n=\frac{a^2-b^2}{a^2}\in \Q$, assurdo.
     \end{itemize}    
     \end{proof}
 
     \item Sia $\mathcal{P}(n)="n^3+5n \text{ è divisibile per }6"$. Dimostrare che vale $\forall n \in \N_{>0}$.
-    \begin{proof}
+    \begin{proof}~
         \begin{itemize}
-            \item (Passo base) $\mathcal{P(1)}="6\text{ è divisibile per }6"$
+            \item (Passo base) $\mathcal{P}(1)="6\text{ è divisibile per }6"$
             \item (Passo induttivo) Assumo che $\exists k \in \N : n^3+5^n=6k$.
-            \item \[(n+1)^3+5(n+1)=n^3+3n^2+3n+1+5n+5=6(k+1)+3(n^2+n)=\]
+            \[(n+1)^3+5(n+1)=n^3+3n^2+3n+1+5n+5=6(n+1)+3(n^2+n)\]
             \begin{oss}
-                Si nota facilmente che $n^2+n=n(n+1)$, ovvero il prodotto di un naturale per il suo successivo, è sempre pari.
+                Si nota facilmente che $n^2+n=n(n+1)$ è il prodotto di un naturale per il suo successivo. Quindi $n^2+n$ è sempre pari. Di conseguenza
             \end{oss}
-            \[6(k+1+\frac{n^2+n}{2})\]
+            \[(n+1)^3+5(n+1)=6(n+1+\frac{n^2+n}{2})\]
         \end{itemize}
     \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
