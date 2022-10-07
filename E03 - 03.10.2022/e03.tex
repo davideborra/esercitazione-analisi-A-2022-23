@@ -14,6 +14,7 @@ CdL in Matematica – a.a. 2022–2023\\ Note esercitazione}
 \chead{Università degli Studi di Trento - Dipartimento di Matematica\\
 CdL in Matematica – a.a. 2022–2023}
 \rhead{03/10/2022}
+\setlength{\headheight}{30pt}.
 \begin{enumerate}[label=\textbf{Esercizio 3.\arabic*.},itemindent=*]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item Determinare gli estremi inferiore e superiore ed eventuali massimi e minimi dei seguenti insiemi 
@@ -62,12 +63,71 @@ CdL in Matematica – a.a. 2022–2023}
         \begin{enumerate}
             \item $\frac{1}{|z|\cdot \overline{z}}=\cos\frac{\pi}{4}+i\sen \frac{\pi}{4}$
             \item $\overline{z}(\Im z-\Re z)=z$
-            \item $z^3=1$
             \item $2z^2+\overline{z}=-1$
         \end{enumerate}
-    \item[\textit{\large Soluzione~}]
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel augue imperdiet, molestie mauris non, euismod nunc. Cras finibus sit amet ipsum sit amet placerat. Etiam in pulvinar risus. Aliquam sed feugiat magna, ac dapibus velit. Pellentesque vestibulum fermentum leo, sit amet hendrerit nisl tempor sed. Cras quis enim et urna faucibus venenatis at ac nulla. Mauris ac egestas lorem. Aenean mollis, libero ac sollicitudin faucibus, erat nunc ultricies odio, nec vehicula nisl purus tincidunt tellus. Maecenas interdum blandit dui, in luctus ipsum posuere vitae. Pellentesque ac accumsan velit, non accumsan odio. Vivamus aliquet cursus velit at rhoncus. Donec laoreet pellentesque accumsan. Aliquam pulvinar ac massa sit amet pulvinar. Duis tristique, magna ut blandit congue, erat ligula dignissim turpis, vel pharetra lectus massa faucibus nisl.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel augue imperdiet, molestie mauris non, euismod nunc. Cras finibus sit amet ipsum sit amet placerat. Etiam in pulvinar risus. Aliquam sed feugiat magna, ac dapibus velit. Pellentesque vestibulum fermentum leo, sit amet hendrerit nisl tempor sed. Cras quis enim et urna faucibus venenatis at ac nulla. Mauris ac egestas lorem. Aenean mollis, libero ac sollicitudin faucibus, erat nunc ultricies odio, nec vehicula nisl purus tincidunt tellus. Maecenas interdum blandit dui, in luctus ipsum posuere vitae. Pellentesque ac accumsan velit, non accumsan odio. Vivamus aliquet cursus velit at rhoncus. Donec laoreet pellentesque accumsan. Aliquam pulvinar ac massa sit amet pulvinar. Duis tristique, magna ut blandit congue, erat ligula dignissim turpis, vel pharetra lectus massa faucibus nisl.
 
+    \item[\textit{\large Soluzione~}]~
+        \begin{enumerate}
+        
+        
+        \item
+        \[\frac{1}{|z|\cdot \overline{z}}=\cos\frac{\pi}{4}+i\sen \frac{\pi}{4}~~~\Harr\]
+        \[\frac{1}{||z|\cdot\overline{z}|}=|\cos\frac{\pi}{4}+i\sen\frac{\pi}{4}|~~~\]
+        Analizzo la prima parte dell'equazione
+        \[\frac{1}{||z|\cdot\overline{z}}=\frac{1}{|z|\cdot|\overline{|z|}|}=\frac{1}{|z|^2}=1\Leftrightarrow|z|^2=1\Leftrightarrow |z|=1\]
+
+        Torno all'equazione originale
+        \[\frac{1}{\overline{z}}=\cos\frac{\pi}{4}+i\sen \frac{\pi}{4}\]
+        Analizzo la prima parte dell'equazione
+        \[\frac{1}{\overline{z}}=\frac{z}{z\cdot\overline{z}}=\frac{z}{|z|^2}\]
+        Ritorno all'equazione originale
+        \[z=\cos\frac{\pi}{4}+i\sen \frac{\pi}{4}\]
+    
+
+        \item $\overline{z}(\Im z-\Re z)=z$
+        \par Utilizzo la forma algebrica $(z=a+ib)$
+        \[(a-ib)(b-a)=a+ib~~~\Harr\]\[a(b-a)+ib(a-b)=a+ib~~~\Harr\]
+        \[\begin{cases}
+        a(b-a)=a \\ b(a-b)=b
+        \end{cases} \]
+        \par
+        Distinguo due casi: \par
+        Caso $a=0$
+        \par
+        \[\begin{cases}
+        \forall b \\ -b^2=b\Leftrightarrow b(b+1)=0\Leftrightarrow z_1=0,z_2=-i
+        \end{cases}\] 
+        \par Caso $a\neq 0$
+        \par
+        \[\begin{cases}
+        b-a=1\Leftrightarrow a-b=-1 \\ -b=b\Leftrightarrow b=0
+        \end{cases} \Leftrightarrow a=-1\Leftrightarrow z_3=-1\]
+        
+
+        \item $2z^2+\overline{z}=-1$
+        \par Utilizzo la forma algebrica $(z=a+ib)$
+        \[2(a+ib)(a+ib)+(a-ib)=-1\Leftrightarrow 2a^2-2b^2+4abi+a-ib=-1\]
+        \[\begin{cases}
+        2a^2-2b^2+a=-1 \\ 4ab-b=0\Leftrightarrow b(4a-1)=0
+        \end{cases}\]
+        
+        Distinguo due casi
+        
+        Caso $b=0$
+        \[\begin{cases}
+        2a^2+a+1=0 \\ \forall a
+        \end{cases} \Leftrightarrow a_{1,2}=\frac{-1\pm\sqrt{1-8}}{4}\Leftrightarrow\nexists a\]
+         Se b=0 non abbiamo soluzioni
+        
+        \par Caso $b\neq0$
+        \par Dalla seconda equazione ottengo che $a=\frac{1}{4}$
+        \[\begin{cases}
+        2\cdot{\frac{1}{16}}-2b^2+\frac{1}{4}=-1 \\ a=\frac{1}{4}
+        \end{cases}\Leftrightarrow -b^2=-\frac{11}{16}\Leftrightarrow b=\pm \frac{\sqrt{11}}{4}\]
+         Ottengo quindi le soluzioni $z_{1,2}=\frac{1}{4}\pm\frac{\sqrt{11}}{4}$
+    
+    \end{enumerate}
+    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item Si considerino le funzioni $f, g, h: \C\to\C$ definite come \[f(z)=z+z_0 \text{, ~~ con $z_0\in \C$ fissato}\]
     \[g(z)=iz\]
@@ -77,7 +137,7 @@ CdL in Matematica – a.a. 2022–2023}
     \[C=\{z:1\leq |z|\leq 2\}\]
     Rappresentare $f(A), g(B), h(B), h(C)$.
     \item[\textit{\large Soluzione~}] Prima di tutto rappresentiamo gli insiemi $A$, $B$, $C$.
-    \begin{figure}[h!]
+     \begin{figure}[h!]
         \centering
         \begin{subfigure}{0.3\textwidth}
             \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
@@ -148,7 +208,7 @@ CdL in Matematica – a.a. 2022–2023}
         \end{subfigure}
     \end{figure}
     Per come funziona la somma in $C$ (metodo punta-coda), sommare $z_0$ ad ogni punto dell'intervallo $A$ è come applicare alla rappresentazione dell'insieme una traslazione di vettore $v$.\\
-    \begin{figure}[h!]
+     \begin{figure}[h!] 
         \centering
         \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
         \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
@@ -185,7 +245,7 @@ CdL in Matematica – a.a. 2022–2023}
     \end{figure}
     Consideriamo un numero complesso $z$ in forma trigonometrica $z=|z|(\cos (\arg z)+ i \sen(\arg z))$. Il numero complesso $iz$ è \[iz=|i||z|\left(\cos\left(\arg z+\frac{\pi}{2}\right)+i\sen\left(\arg z+\frac{\pi}{2}\right)\right)\]
     Quindi è come se fosse stata applicata all'insieme una rotazione di $\frac{\pi}{2}$
-    \begin{figure}[h!]
+     \begin{figure}[h!] 
         \centering
         \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
         \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
@@ -223,7 +283,7 @@ CdL in Matematica – a.a. 2022–2023}
         Sia $z\in S: z=\rho (\cos \vartheta + i \sen \vartheta)$, bisogna dimostrare che $\exists w \in B:w^2=z$. Scegliamo \[w=\sqrt{\rho}\left(\cos\frac{\vartheta}{2}+ i \sen \frac{\vartheta}{2}\right)\], per il quale vale $h(w)=z$. Di conseguenza $z\in h(B)$, per cui $h(B)=S$.
     \end{proof}
     Analogamente si dimostra che $h(C)=\{z:1\leq |z|\leq 4\}$.
-    \begin{figure}[h!]
+     \begin{figure}[h!] 
         \centering
         \definecolor{qqqqff}{rgb}{0.,0.,1.}
         \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
@@ -247,6 +307,31 @@ CdL in Matematica – a.a. 2022–2023}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\item 
 %\item[\textit{\large Soluzione~}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Rappresentare i seguenti insiemi in $\mathbb{C}$
+\begin{enumerate}
+        \item $A=\left\{z:\frac{|z-1|}{|z+1|}=1\right\}$
+        \item $B=\left\{z:|z-i-2|<|z+2|, |z|\geq 1\right\}$
+    \end{enumerate}
+
+\item[\textit{\large Soluzione~}]~
+\begin{enumerate}
+\item
+$|z+1|\neq 0\Leftrightarrow z+1\neq 0\Leftrightarrow z\neq -1$\\
+\(A=\left\{z\neq -1:|z-1|=|z+1|\right\}\)
+$|z+1|=|z-(-1)|\Leftrightarrow |z-(-1)|=|z-1|$
+\par $|z-(-1)|=$ distanza da $-1$, $|z-1|=$ distanza da $1$
+\item
+$|z-(i+2)|<|z-(-2)|$
+\par Distanza da $i+2<$ distanza da $-2$
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+
+\item[\textit{\large Soluzione~}]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{enumerate}
 \end{document}
