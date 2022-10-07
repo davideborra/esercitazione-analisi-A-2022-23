@@ -136,7 +136,7 @@ CdL in Matematica – a.a. 2022–2023}
     \[B=\left\{z:|z|\leq 2, \arg z\in \left]\frac{3}{8}\pi, \frac{\pi}{2}\right[\right\}\]
     \[C=\{z:1\leq |z|\leq 2\}\]
     Rappresentare $f(A), g(B), h(B), h(C)$.
-    \item[\textit{\large Soluzione~}] Prima di tutto rappresentiamo gli insiemi $A$, $B$, $C$.
+    \item[\textit{\large Soluzione~}] Prima di tutto rappresentiamo gli insiemi $A$, $B$, $C$ (Vedi Figura \ref{fig1}).
      \begin{figure}[h!]
         \centering
         \begin{subfigure}{0.3\textwidth}
@@ -162,6 +162,7 @@ CdL in Matematica – a.a. 2022–2023}
                 \draw (0.29307222648774567,0.9178337611061765) node[anchor=north west] {$A$};
                 \end{axis}
                 \end{tikzpicture}
+                \caption{}
         \end{subfigure}
         \begin{subfigure}{0.3\textwidth}
             \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
@@ -185,6 +186,7 @@ CdL in Matematica – a.a. 2022–2023}
             \draw (0.05,1.5553935837261437) node[anchor=north west] {$B$};
             \end{axis}
             \end{tikzpicture}
+            \caption{}
         \end{subfigure}
         \begin{subfigure}{0.3\textwidth}
             \definecolor{qqqqff}{rgb}{0.,0.,1.}
@@ -205,9 +207,12 @@ CdL in Matematica – a.a. 2022–2023}
             \node[color=qqqqff] at (1,1) {$C$};
             \end{axis}
             \end{tikzpicture}
+            \caption{}
         \end{subfigure}
+        \caption{}
+        \label{fig1}
     \end{figure}
-    Per come funziona la somma in $C$ (metodo punta-coda), sommare $z_0$ ad ogni punto dell'intervallo $A$ è come applicare alla rappresentazione dell'insieme una traslazione di vettore $v$.\\
+    Per come funziona la somma in $C$ (metodo punta-coda), sommare $z_0$ ad ogni punto dell'intervallo $A$ è come applicare alla rappresentazione dell'insieme una traslazione di vettore $v$ (Figura \ref{fig2}).\\
      \begin{figure}[h!] 
         \centering
         \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
@@ -242,9 +247,11 @@ CdL in Matematica – a.a. 2022–2023}
         \end{scriptsize}
         \end{axis}
         \end{tikzpicture}
+        \caption{}
+        \label{fig2}
     \end{figure}
     Consideriamo un numero complesso $z$ in forma trigonometrica $z=|z|(\cos (\arg z)+ i \sen(\arg z))$. Il numero complesso $iz$ è \[iz=|i||z|\left(\cos\left(\arg z+\frac{\pi}{2}\right)+i\sen\left(\arg z+\frac{\pi}{2}\right)\right)\]
-    Quindi è come se fosse stata applicata all'insieme una rotazione di $\frac{\pi}{2}$
+    Quindi è come se fosse stata applicata all'insieme una rotazione di $\frac{\pi}{2}$ (Figura \ref{fig3}).
      \begin{figure}[h!] 
         \centering
         \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
@@ -274,15 +281,18 @@ CdL in Matematica – a.a. 2022–2023}
         \end{scriptsize}
         \end{axis}
         \end{tikzpicture}
+        \caption{}
+        \label{fig3}
     \end{figure}
     Analogamente si ha che siccome 
     \[z^2=|z|^2(\cos (2\arg z)+i\sen(2\arg z)\]
-    Il raggio del settore circolare $h(B)$ è $4$ e l'angolo è in $\left]\frac{3}{4}\pi, \pi\right[$
+    Il raggio del settore circolare $h(B)$ è $4$ e l'angolo è in $\left]\frac{3}{4}\pi, \pi\right[$.
     \begin{proof}
         Dimostriamo che l'insieme \[S=\left\{z:|z|\leq4 \text{ e } \arg z \in \left]\frac{3}{4}\pi, \pi\right[\right\}\] coincide con $h(B)$. Per quanto detto in precedenza $h(b)\subseteq S$, quindi rimane da dimostrare che $h(b)\supseteq S$.\\
         Sia $z\in S: z=\rho (\cos \vartheta + i \sen \vartheta)$, bisogna dimostrare che $\exists w \in B:w^2=z$. Scegliamo \[w=\sqrt{\rho}\left(\cos\frac{\vartheta}{2}+ i \sen \frac{\vartheta}{2}\right)\], per il quale vale $h(w)=z$. Di conseguenza $z\in h(B)$, per cui $h(B)=S$.
+
     \end{proof}
-    Analogamente si dimostra che $h(C)=\{z:1\leq |z|\leq 4\}$.
+    Analogamente si dimostra che $h(C)=\{z:1\leq |z|\leq 4\}$ (Figura \ref{fig4}).
      \begin{figure}[h!] 
         \centering
         \definecolor{qqqqff}{rgb}{0.,0.,1.}
@@ -303,10 +313,9 @@ CdL in Matematica – a.a. 2022–2023}
         \node[color=qqqqff] at (2,2) {$h(C)$};
         \end{axis}
         \end{tikzpicture}
+        \caption{}
+        \label{fig4}
     \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\item 
-%\item[\textit{\large Soluzione~}]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Rappresentare i seguenti insiemi in $\mathbb{C}$
 \begin{enumerate}
@@ -320,18 +329,62 @@ CdL in Matematica – a.a. 2022–2023}
 $|z+1|\neq 0\Leftrightarrow z+1\neq 0\Leftrightarrow z\neq -1$\\
 \(A=\left\{z\neq -1:|z-1|=|z+1|\right\}\)
 $|z+1|=|z-(-1)|\Leftrightarrow |z-(-1)|=|z-1|$
-\par $|z-(-1)|=$ distanza da $-1$, $|z-1|=$ distanza da $1$
+\par $|z-(-1)|=$ distanza da $-1$, $|z-1|=$ distanza da $1$ (Figura \ref{fig5a})
 \item
 $|z-(i+2)|<|z-(-2)|$
-\par Distanza da $i+2<$ distanza da $-2$
-
+\par Distanza da $i+2<$ distanza da $-2$ (Figura \ref{fig5b})
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \definecolor{qqqqff}{rgb}{0.,0.,1.}
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \begin{axis}[
+        x=1.0cm,y=1.0cm,
+        axis lines=middle,
+        ymajorgrids=true,
+        xmajorgrids=true,
+        xmin=-3.3,
+        xmax=3.3,
+        ymin=-3.3,
+        ymax=3.3,
+        xtick={-3.0,-2.0,...,3.0},
+        ytick={-3.0,-2.0,...,3.0},]
+        \clip(-3.3,-3.3) rectangle (3.3,3.3);
+        \draw [line width=2.pt,color=qqqqff] (0.,-3.3) -- (0.,3.3);
+        \end{axis}
+        \end{tikzpicture}
+        \caption{}
+        \label{fig5a}
+    \end{subfigure}
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig5b.pdf}
+        \caption{}
+        \label{fig5b}
+    \end{subfigure}
+    \caption{}
+\end{figure}
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 
+\item Dimostrare le seguenti disuguaglianze (con $a,b>0$).
+\[\frac{2}{\frac{1}{a}+\frac{1}{b}}\underset{(i)}{\leq} \sqrt{ab}\underset{(ii)}{\leq}\frac{a+b}{2}\underset{(iii)}{\leq} \sqrt{\frac{a^2+b^2}{2}}\]
 
-\item[\textit{\large Soluzione~}]
-
+\item[\textit{\large Soluzione~}]~
+\begin{enumerate}[label=(\textit{\roman*})]
+    \item Riscriviamo il primo membro come \[\frac{2}{\frac{1}{a}+\frac{1}{b}}=\frac{2}{\frac{a+b}{ab}}=\frac{2ab}{a+b}\]
+    Dobbiamo dimostrare che $\frac{2}{\frac{1}{a}+\frac{1}{b}}\leq \sqrt{ab}$\[\Harr ~~~\frac{2\sqrt{ab}}{a+b}\leq 1 ~~~\Harr~~~\sqrt{ab}\leq\frac{a+b}{2}\]
+    Abbiamo dimostrato che la (\textit{i}) è equivalente alla (\textit{ii}), procediamo quindi alla dimostrazione di quest'ultima.
+    \item \[\sqrt{ab}\leq\frac{a+b}{2}~~~\Harr~~~ab\leq\frac{a^2}{4}+\frac{b^2}{4}+\frac{1}{2}ab~~~\Harr~~~ \frac{a^2}{4}+\frac{b^2}{4}-\frac{1}{2}ab\geq 0~~~\Harr~~~\frac{1}{4}(a-b)^2\geq0\] 
+    \item Dobbiamo dimostrare che $\frac{a+b}{2}\leq \sqrt{\frac{a^2+b^2}{2}}$
+    \[\Harr ~~~ \frac{a^2}{4}+\frac{b^2}{4}+\frac{1}{2}ab\leq \frac{a^2+b^2}{2}~~~~\Harr~~~\frac{1}{4}(a-b)^2\geq 0\]
+    \begin{lemma}[Disuguaglianza di Young]
+        Siano $a,b, \varepsilon>0$, allora si ha che
+        \[ab\leq \frac{1}{2}a^2+\frac{1}{2}b^2\]
+        \[ab\leq \frac{\varepsilon}{2}a^2+\frac{1}{2\varepsilon}b^2\]
+    \end{lemma}
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{enumerate}
 \end{document}
