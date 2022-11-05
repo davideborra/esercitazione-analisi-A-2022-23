@@ -128,11 +128,22 @@ CdL in Matematica – a.a. 2022–2023}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item ~
 \begin{enumerate}
-    \item Sia $f(x)=x^5+2x^3-2$. Dimostrare che $\exists!x_0\in \R:f(x_0)=0$ e determinare un intervallo $]a,b[$ con $\scriptstyle b-a\leq\frac{1}{4}$ tale che $x_0\in]a,b[$
-    \item Sia $f(x)=x^3+x+1$ su $\R$. Dimostrare che $f$ è invertibile.
-    \item Sia $f:\R\to\R$. Dimostrare che se $\exists ]a,b[\subseteq \R$
+    \item Sia $f(x)=x^5+2x^3-2$. Dimostrare che $\exists!x_0\in \R:f(x_0)=0$ e determinare un intervallo $]a,b[$ con $ b-a\leq{\scriptstyle\frac{1}{4}}$ tale che $x_0\in]a,b[$
+    \item Sia $f(x)=x^3+x+1$ su $\R$. Dimostrare che $f$ è invertibile e calcolare $\lim_{y\to \infty}f^{-1}\left( \frac{3y}{y+4} \right)$.
+    \item Sia $f:\R\to\R$. Dimostrare che se $\exists ~]a,b[\subseteq \R, x_0\in ~]a,b[\text{ t.c. }f|_{]a,b[\setminus x_0}>0$
 \end{enumerate}
-\item[\textit{\large Soluzione~}]~
+\item[\textit{\large Soluzione~}]~ 
+    \begin{enumerate}
+        \item $\lim_{x\to+\infty}f(x)=+\infty$ e $\lim_{x\to-\infty}f(x)=-\infty$, inoltre $f$ è continua e $\exists a,b\in \R \text{ t.c. } f(a)<0 ~ \text{e}~f(b)>0$, di conseguenza per il teorema dell'esistenza degli zeri, $\exists x_0\:f(x_0)=0$. inoltre $f$ è strettamente crescente in quanto somma di funzioni strettamente crescenti, quindi $\exists!x_0:f(x_0)=0$. Per trovare l'intervallo andiamo per tentativi:
+        \[f(0)=-2~~~~~~~~~f(1)=1\]
+        Adesso calcolo $f\left( \frac{1}{2} \right)=\frac{1}{32}+\frac{1}{4}-2=-\frac{55}{32}$. Siccome $f\left( \frac{1}{2} \right)<0$, lo zero si trova tra $\frac{1}{2}$ e $1$. Calcolo quindi $f\left( \frac{3}{4} \right)=-\frac{941}{1024}$. L'intervallo che cercaviamo è quindi $\left]\frac{3}{4},1 \right[$.
+        \item È iniettiva perché è strettamente monotona in quanto somma di funzioni strettamente monotone. È inoltre suriettiva in quanto continua e $\lim_{x\to+\infty}f(x)=+\infty$ e $\lim_{x\to-\infty}f(x)=-\infty$ (per il teorema dei valori intermedi $f(\R)=\R$). Di conseguenza è biiettiva e quindi invertibile su $\R$.
+        \[\lim_{y\to \infty}f^{-1}\left( \frac{3y}{y+4} \right)=f^{-1}\left( \lim_{y\to \infty}\frac{3y}{y+4} \right)=f^{-1}(3)=1\]
+        Infatti siccome $f$ è continua e definita su un intervallo, anche la sua inversa è continua.
+        \item Le tempistiche della lezione non hanno permesso lo svolgimento di questo punto.
+        
+    \end{enumerate}
+    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{enumerate}
