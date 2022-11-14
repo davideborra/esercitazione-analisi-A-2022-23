@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{../lambdatex} %disponibile all'indirizzo http://lambdamath.altervista.it/esercizi/lambdatex.sty
+
+\everymath{\displaystyle}
+\title{Università degli Studi di Trento - Dipartimento di Matematica\\
+CdL in Matematica – a.a. 2022–2023\\ Note esercitazione}
+\author{Esercitatore: Simone Verzellesi\thanks{Trascrizione a cura di Davide Borra}}
+\date{14 Novembre 2022}
+
+\begin{document}
+\maketitle
+\lhead{Note esercitazione}
+\chead{Università degli Studi di Trento - Dipartimento di Matematica\\
+CdL in Matematica – a.a. 2022–2023}
+\rhead{14/11/2022}
+\setlength{\headheight}{30pt}
+\begin{enumerate}[label=\textbf{Esercizio 
+    8.\arabic*.},itemindent=*]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item Calcolare i seguenti limiti con il teorema di de l'Hôpital:
+    \begin{enumerate}
+        \item $\lim_{x\to 0^+}\frac{\cos^3x-1}{\log(1+2x)\cosh(x^3)}$
+        \item $\lim_{x\to 0^+}\frac{\log(\log(x+1))}{\log x}$
+    \end{enumerate}
+    \item[\textit{\large Soluzione~}]~
+    \begin{enumerate}
+        \item Verifichiamo le ipotesi:
+        \begin{itemize}
+            \item $f(x)=\cos^3x-1\underset{x\to0^+}{\longrightarrow}0$
+            \item $g(x)=\log(1+2x)\cosh(x^3)\underset{x\to0^+}{\longrightarrow}0$
+            \item $g'(x)=\frac{2}{1+2x}\cosh x^3+3x^2\sinh x^3\log(1+2x)$. Siccome $g(0)=2$, per il teorema della permanenza del segno $\exists b\in \R_{>0}:\forall x \in ]0,b[, g'(x)>0$
+        \end{itemize}
+        È quindi possibile applicare il teorema di de l'Hôpital
+        \[\lim_{x\to 0^+}\frac{\cos^3x-1}{\log(1+2x)\cosh(x^3)}=\left[ \frac{0}{0} \right]\underset{\text{H}}=\lim_{x\to0^+}\frac{-3\sin x \cos^2 x}{\frac{2}{1+2x}\cosh x^3+3x^2\sinh x^3\log(1+2x)}=0\]
+
+        \item Verifichiamo le ipotesi:
+        \begin{itemize}
+            \item $f(x)=\log(\log(x+1))\underset{x\to0^+}{\longrightarrow}0$
+            \item $g(x)=\log x\underset{x\to0^+}{\longrightarrow}0$
+            \item $g'(x)\neq 0$ in un intorno destro di $0$, infatti $g'(x)=\frac{1}{x}\neq0~~\forall x\in \R_{>0}$
+            \[\lim_{x\to 0^+}\frac{\log(\log(x+1))}{\log x}=\left[ \frac{\infty}{\infty} \right]=\lim_{x\to 0^+}\frac{\frac{1}{x+1}\cdot\frac{1}{\log(x+1)}}{\frac{1}{x}}=\lim_{x\to 0^+}\frac{1}{x+1}\cdot \underbrace{\frac{x}{\log(1+x)}}_{\to 1}\]
+        \end{itemize}
+    \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item Calcolare il polinomio di Taylor con resto di Peano di
+    \begin{enumerate}
+        \item $\log x$ di ordine $3$ in $x_0=2$
+        \item $\sin(\tg x)+\log (1+\arctg x)$ di ordine $3$ in $x_0=0$
+    \end{enumerate}
+    \item[\textit{\large Soluzione~}]~
+    \begin{enumerate}
+        \item Abbiamo due modi: il primo applicando la formula di Taylor mentre il secondo cercando di ricondurci agli sviluppi noti.\\
+        \textbf{Modo 1:}
+        \[f^{(1)}(x)=\frac{1}{x}~~~~f^{(2)}(x)=-\frac{1}{x^2}~~~~f^{(3)}(x)=+\frac{2}{x^3}\]
+        \[\begin{align*}
+            \log x & = \log 2+\frac{1}{2}(x-2)-\frac{1}{4\cdot 2!}(x-2)^2+\frac{1}{4\cdot 3!}(x-2)^3+o((x-2)^3)=\\
+            &=\log(2)+\frac{1}{2}(x-2)-\frac{1}{8}(x-2)^2+\frac{1}{24}(x-2)^3+o((x-2)^3)=\\
+            &=\log 2-\frac{11}{16}+\frac{3}{2}x-\frac{3}{8}x^2+\frac{1}{24}x^3+o((x-2)^3)
+        \end{align*}\]
+        \textbf{Modo 2:}
+        \[f(x)=\log(1+t)=t-\frac{t^2}{2}+\frac{t^3}{3}+o(t^3)\]
+        Devo riuscire a ricondurmici:
+        \[\log(x)=\log(\frac{x}{2}\cdot 2)=\log2+\log\frac{x}{2}=\log2+\log\left( 1+\left( \frac{x}{2}-1 \right) \right)\]
+        Da cui
+        \[\log x=\log 2+\left( \frac{x}{2}-1 \right)+\frac{1}{2}\left( \frac{x}{2}-1 \right)^2+\frac{1}{3}\left( \frac{x}{2}-1 \right)^3+o\left(\left( \frac{x}{2}-1 \right)^3\right)\]
+        \item Poniamo $t=\tg x$ e $y=\arctg(x)$. In un intorno di $0$, sia $\tg x$ che $\arctg x$ tendono a 0, quindi anche $t$ e $y$. Utilizzando gli sviluppi fondamentali
+        \[\sen t+\log(1+ y)=\left[ t-\frac{t^3}{6} +o(t^3)\right]+\left[ y-\frac{y^2}{2} +\frac{y^3}{3}+o(y^3)\right]\]
+        Adesso sviluppiamo anche $t$ e $y$:
+        \[t=\tg x= x+\frac{x^3}{3}+o(x^3)~~~~~~y=\arctg x=x-\frac{x^3}{3}+o(x^3)\]
+        Di conseguenza 
+        \[\begin{align*}
+            &\sen (\tg x)+\log(1+\arctg x)=\\&=\left[ \left( x+\frac{x^3}{3}+o(x^3) \right)-\frac{\left( x+\frac{x^3}{3}+o(x^3) \right)^3}{6} +o\left(\left( x+\frac{x^3}{3}+o(x^3) \right)^3\right)\right]+\\&+\left[ \left( x-\frac{x^3}{3}+o(x^3) \right)-\frac{\left( x-\frac{x^3}{3}+o(x^3) \right)^2}{2} +\frac{\left( x-\frac{x^3}{3}+o(x^3) \right)^3}{3}+o\left(\left( x-\frac{x^3}{3}+o(x^3) \right)^3\right)\right]=\\&=2x+\frac{x^3}{3}-\frac{1}{2}x^2+o(x^3)
+        \end{align*}\]
+    \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Calcolare i seguenti limiti utilizzando gli sviluppi di Taylor:
+    \begin{enumerate}
+        \item $\lim_{x\to 0}\frac{e^{x^2}-\cos x-\frac{3}{2}x^2}{x^4}$
+        \item $\lim_{x\to 0}\frac{e^x-1-\log(1-x)}{\tg x-x}$
+        \item $\lim_{x\to 0}\frac{x-\sin^2 \sqrt{x}-\sin^2x}{x^2}$
+    \end{enumerate}
+    \item[\textit{\large Soluzione~}]~
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+\end{document}
