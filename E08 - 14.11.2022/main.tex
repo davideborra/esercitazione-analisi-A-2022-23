@@ -81,6 +81,99 @@ CdL in Matematica – a.a. 2022–2023}
         \item $\lim_{x\to 0}\frac{x-\sin^2 \sqrt{x}-\sin^2x}{x^2}$
     \end{enumerate}
     \item[\textit{\large Soluzione~}]~
+    \begin{enumerate}
+        \item $\lim_{x\to 0}\frac{e^{x^2}-\cos x-\frac{3}{2}x^2}{x^4}$
+        \\ $e^x=1+x+\frac{x^2}{2}+\frac{x^3}{3!}+o(x^3)~~~\Rarr~~~e^{x^2}=1+x^2+\frac{x^4}{2!}+o(x^4)$
+        \\$\cos x=1-\frac{x^2}{2}+\frac{x^4}{24}+o(x^4)$
+        \\ Per eliminare la forma indeterminata espando fino al quarto ordine:
+        \[
+        \begin{align*}
+            \lim_{x\to 0}\frac{e^{x^2}-\cos x-\frac{3}{2}x^2}{x^4}&=\lim_{x\to 0}\frac{\left( 1+x^2+\frac{x^4}{2!}+o(x^4) \right)-\left( 1-\frac{x^2}{2}+\frac{x^4}{24}+o(x^4) \right)-\frac{3}{2}x^2}{x^4}=\\&=\lim_{x\to 0}\frac{11}{24}\cdot \frac{\cancel{x^4}}{\cancel{x^4}}+\cancel{\frac{o(x^4)}{x^4}}=\frac{11}{24}
+        \end{align*}\]
+        \item $\lim_{x\to 0}\frac{e^x-1-\log(1-x)}{\tg x-x}$
+        \\ $e^x=1+x+\frac{x^2}{2}+o(x^2)$
+        \\ $\log(1+(-x))=-x+\frac{x^2}{2}+o(x^2)$
+        \\ $\tg x=x+\frac{x^3}{3}+o(x^3)$
+        Sostituisco gli sviluppi
+        \[\begin{align*}
+            \lim_{x\to 0}\frac{e^x-1-\log(1-x)}{\tg x-x}&=\lim_{x\to 0} \frac{(1+x+o(x)-1-(-x+o(x)))}{(x+\frac{x^3}{3}+o(x^3))-x}=\lim_{x\to 0}\frac{2x+o(x)}{x^3+o(x^3)}=+\infty
+        \end{align*}\]
+        \item $\lim_{x\to 0}\frac{x-\sin^2 \sqrt{x}-\sin^2x}{x^2}$
+        \\Proviamo a sviluppare al primo ordine: $\sin x=x+o(x) ~~\Rarr~~\sen \sqrt{x}=\sqrt{x}+o(\sqrt{x})$
+        \[\lim_{x\to 0}\frac{x-(\sqrt{x}+o(\sqrt{x}))^2-(x+o(x))^2}{x^2}=\lim_{x\to 0}\frac{o(x)}{x^2}=\:?\]
+        Il primo ordine non è sufficiente: $\sin x=x-\frac{x^3}{3!}+o(x) ~~\Rarr~~\sen \sqrt{x}=\sqrt{x}-\frac{\sqrt{x^3}}{3!}+o(x^\frac{3}{2})$
+        \[\begin{align*}
+            \lim_{x\to 0}\frac{x-\sin^2 \sqrt{x}-\sin^2x}{x^2}&=\lim_{x\to 0} \frac{x-\left( \sqrt{x}-\frac{\sqrt{x^3}}{3!}+o(x^\frac{3}{2}) \right)^2-\left( x-\frac{x^3}{3!}+o(x) \right)^2}{x^2}=\\&=\lim_{x\to 0}\frac{x-\left( x+\frac{\sqrt{x^6}}{36}-\frac{x^2}{3} +o(x^3)\right)-\left( x^2-\frac{x^4}{3}+\frac{x^6}{36}+o(x^6) \right)}{x^2}=\\&=\lim_{x\to 0}\frac{\frac{x^2}{3}-x^2+\overbrace{\frac{x^3}{36}+o(x^3)}^{o(x^2)}}{x^2}=-\frac{2}{3}
+        \end{align*}\]
+
+    \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Dimostrare che $\sin\frac{1}{n}>\frac{1}{n+1}~~~\forall n\in \N_{>0}$
+\item[\textit{\large Soluzione~}]~Sviluppiamo con il polinomio di Taylor con resto di Lagrange
+\[\sin x=x-\frac{x^3}{6}+\frac{\sin^{(4)}(c)}{4!}x^4~~~\text{(con $c\in\left[ 0,\frac{1}{n} \right]$ )}\]
+\[\sin\frac{1}{n}=\frac{1}{n}-\frac{1}{6n^3}+\underbrace{\frac{\sin^{(4)}(c)}{n^44!}}_{>0}\geq\frac{1}{n}-\frac{1}{6n^3}\]
+Basta quindi dimostrare che \[\frac{1}{n}-\frac{1}{6n^3}>\frac{1}{n+1}~~\Harr~~6n^2-n-1>0~~\Harr~~n_{1,2}=\frac{1\pm\sqrt{1+24}}{12}=\langle\begin{matrix}\scriptstyle\frac{1}{2}\\\scriptstyle-\frac{1}{3}\end{matrix}\]
+\[\begin{cases}
+    n<-\frac{1}{3}\lor n>\frac{1}{2}\\
+    n\in\N
+\end{cases}\Rarr n\geq1\]
+QED
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Calcolare $\sqrt{e}$ con $4$ cifre decimali di precisione.
+\item[\textit{\large Soluzione~}]~Sappiamo che \[e^x=\sum_{k=0}^n\frac{x^k}{k!}+\frac{e^c}{(n+1)!}x^{n+1}\]
+dove $e^c$ è la derivata $n+1$-esima di $e^x$ calcolata in $x=c$. In particolare
+\begin{equation}\sqrt{e}=e^{\frac{1}{2}}=\sum_{k=0}^n\frac{1}{2^kk!}+\frac{e^c}{(n+1)!}\left( \frac{1}{2} \right)^{n+1}\end{equation}
+Adesso dobbiamo stabilire per quale valore di $n$ l'errore non influenza le prime $4$ cifre del risultato. Osserviamo che $e<3$ e $c<\frac{1}{2}$ quindi $e^c<\sqrt{3}<2$:
+\[\frac{e^c}{(n+1)!2^{n+1}}<\frac{2}{(n+1)}=\frac{1}{2^n(n+1)!}<\frac{1}{10^5}\]
+\[10^5<(n+1)!2^n~~~\Rarr~~~n\geq6\]
+Sostituendo ora $n$ nella (1) si ricava il valore cercato
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Determinare per quali $\alpha\in \R$ la serie $\sum_{n= 0}^{+\infty}\left( \frac{2+\alpha}{1-\alpha} \right)^n$ converge e determinarne il valore.
+\item[\textit{\large Soluzione~}]~ Osserviamo che si tratta di una serie geometrica di ragione $q:=\frac{2+\alpha}{1-\alpha}$. Quindi $\sum_nq^n$ è
+\begin{itemize}
+    \item convergente se $|q|<1$
+    \item divergente se $q\geq1$
+    \item indeterminata se $q\leq 1$
+\end{itemize}
+Si tratta quindi di risolvere 
+\(\left|\frac{2+\alpha}{1-\alpha}\right|<1\)
+e si ottiene che la serie è
+\begin{itemize}
+    \item convergente se $\alpha<-\frac{1}{2}$
+    \item divergente se $-\frac{1}{2}\leq \alpha\leq 1$
+    \item indeterminata se $\alpha> 1$
+\end{itemize}
+Inoltre se la serie converge
+\[\sum_{n=0}^{+\infty}=\frac{1}{1-q}=\frac{1}{1-\frac{2+\alpha}{1-\alpha}}=\frac{\alpha-1}{2\alpha+1}\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Calcolare \begin{itemize}
+    \item $\sum_{n=1}^{+\infty}\frac{n}{(n+1)!}$
+    \item $\sum_{n=1}^{+\infty}\frac{1}{n(n+1)(n+2)}$
+\end{itemize}
+\item[\textit{\large Soluzione~}]~
+\begin{itemize}
+    \item Cerchiamo di riscrivere la serie per ricondurci a qualcosa di noto
+    \[a_n:=\frac{n}{(n+1)!}=\frac{n+1-1}{(n+1=!}=\frac{\cancel{n+1}}{\cancel{(n+1)}n!}-\frac{1}{(n+1)!}=\frac{1}{n!}-\frac{1}{(n+1)!}\]
+    \[\sum_{n=1}^{+\infty}\frac{n}{(n+1)!}=\sum_{n=1}^{+\infty}\left(\frac{1}{n!}-\frac{1}{(n+1)!}\right)\]
+    Si nota quindi che si tratta di una serie telescopica, per cui si ha che
+    \[s_N=\sum_{n=1}^{N}\left(\frac{1}{n!}-\frac{1}{(n+1)!}\right)={1}-\frac{1}{(N+1)!}\]
+    Da cui 
+    \[\sum_{n=1}^{+\infty}\frac{n}{(n+1)!}=1\lim_{N\to+\infty}\frac{1}{(N+1)!}=1\]
+    \item Cerchiamo di riscrivere la serie per ricondurci a qualcosa di noto
+    \[a_n:=\frac{1}{n(n+1)(n+2)}=\frac{A}{n(n+1)}+\frac{B}{(n+1)(n+2)}=\frac{(n+2)A+nB}{n(n+1)(n+2)}\]
+    \[\begin{cases}
+        A+B=0\\
+        A=\frac{1}{2}
+    \end{cases}~~\Harr~~\begin{cases}
+        A=\frac{1}{2}\\
+        B=-\frac{1}{2}
+    \end{cases}\]
+    Di conseguenza riscrivo la serie e mi accorgo che si tratta di una serie telescopica:
+    \[\sum_{n=1}^{+\infty}\frac{1}{n(n+1)(n+2)}=\sum_{n=1}^{+\infty}\left( \frac{1}{2n(n+1)}-\frac{1}{2(n+1)(n+1)} \right)=\frac{1}{4}-\lim_{n\to+\infty}\frac{1}{2(n+1)(n+2)}=\frac{1}{4}\]
+    
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \end{enumerate}
 \end{document}
