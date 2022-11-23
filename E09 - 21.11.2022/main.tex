@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{../lambdatex} %disponibile all'indirizzo http://lambdamath.altervista.it/esercizi/lambdatex.sty
+\usepackage{tasks}
+\usepackage{exsheets}
+\newcommand{\se}{\text{ se }}
+
+\everymath{\displaystyle}
+
+\title{Università degli Studi di Trento - Dipartimento di Matematica\\
+CdL in Matematica – a.a. 2022–2023\\ Note esercitazione}
+\author{Esercitatore: Simone Verzellesi\thanks{Trascrizione a cura di Davide Borra}}
+\date{21 Novembre 2022}
+\begin{document}
+\maketitle
+\lhead{Note esercitazione}
+\chead{Università degli Studi di Trento - Dipartimento di Matematica\\
+CdL in Matematica – a.a. 2022–2023}
+\rhead{21/11/2022}
+\setlength{\headheight}{30pt}
+% \begin{question}
+%     pippo
+%\end{question}
+\begin{enumerate}[label=\textbf{Esercizio 9.\arabic*.},itemindent=*]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item Studiare il carattere delle seguenti serie:
+    \begin{tasks}(3)
+        \task $\sum_{n=1}^\infty\left(\frac{\sin n}{n}\right)^2$
+        \task $\sum_{n=1}^\infty\frac{1}{n}\tg\left( \frac{1}{n+1} \right)$
+        \task $\sum_{n=1}^\infty\frac{n^2}{2^n}$
+        \task $\sum_{n=1}^\infty\frac{2^n}{n!}$
+        \task $\sum_{n=2}^\infty\frac{\cos(n\pi)}{n-1}$
+        \task $\sum_{n=1}^\infty\frac{2\cos n-1}{n(n+1)^2}$
+    \end{tasks}
+    \item[\textit{\large Soluzione~}]~
+    \begin{tasks}(1)
+        \task $\sum_{n=1}^\infty\left(\frac{\sin n}{n}\right)^2$\\
+        Prima di tutto verifichiamo la condizione necessaria di convergenza: \[\lim_{n\to \infty}a_n=\lim_{n\to \infty}\sum_{n=1}^\infty\left(\frac{\sin n}{n}\right)^2=0\]
+        Siccome il criterio è verificato e la serie è a termini positivi, è possibile appplicare il criterio del confronto. Siccome la funzione seno è limitata, possiamo stimare 
+        \[a_n=\left(\frac{\sin n}{n}\right)^2\leq\frac{1}{n^2}\]
+        Di conseguenza, per il criterio del confronto
+        \[\sum_{n=1}^\infty\frac{1}{n^2} \text{ converge }\implies \sum_{n=1}^\infty\left(\frac{\sin n}{n}\right)^2 \text{ converge }\]
+        \task $\sum_{n=1}^\infty\frac{1}{n}\tg\left( \frac{1}{n+1} \right)$\\
+        La condizione necessaria è verificata e, siccome $0\leq \frac{1}{n+1}\leq \frac{\pi}{2}  \Rarr \tg\left( \frac{1}{1+n} \right)\geq 0 ~~~~\forall n\in \N$, la serie è a termini positivi, per cui è possibile applicare il criterio del confronto asintotico.
+        \[\frac{1}{n}\tg\left( \frac{1}{n+1} \right)\sim \frac{1}{n}\cdot \frac{1}{n+1}\sim \frac{1}{n^2}\]
+        Di conseguenza, siccome la serie armonica generalizzata converge con $\alpha >1$, la serie converge.
+        \task $\sum_{n=1}^\infty\frac{n^2}{2^n}$\\
+        La serie è a termini positivi ed è rispettata la condizione necessaria. È quindi possibile applicare il criterio della radice $n$-esima.
+        \[\lim_{n\to+\infty}\sqrt[n]{a_n}=\lim_{n\to\infty}\frac{\sqrt[n]{n^2}}{\sqrt[n]{2^n}}=\frac{1}{2}\]
+        Di conseguenza per il criterio della radice $n$-esima, la serie converge.
+        \task $\sum_{n=1}^\infty\frac{2^n}{n!}$
+        La serie è a termini positivi ed è rispettata la condizione necessaria. È quindi possibile applicare il criterio del rapporto.
+        \[\lim_{n\to+\infty}\frac{a_{n+1}}{a_n}=\lim_{n\to+\infty}\frac{2^{n+1}}{(n+1)!}\cdot\frac{n!}{2^n}=\lim_{n\to+\infty}\frac{2\cdot\cancel{2^n}}{(n+1)\cancel{n!}}\cdot\frac{\cancel{n!}}{\cancel{2^n}}=0\]
+        Di conseguenza per il criterio del rapporto la serie converge.
+        \task $\sum_{n=2}^\infty\frac{\cos(n\pi)}{n-1}$\\
+        La condizione necessaria è verificata. Osserviamo che valutare la convergenza assoluta non fornisce informazioni sufficienti per valutare il carattere della serie perché non si riesce a valutare il valore di $\cos(n\pi)$. È invece interessante osservare che
+        \[\cos(n\pi)=\begin{cases}
+            -1&\text{se $n$ dispari}\\
+            1&\text{se $n$ pari}
+        \end{cases}=(-1)^n\]
+        Di conseguenza possiamo riscrivere la serie come una serie a segni alterni
+        \[\sum_{n=2}^\infty\frac{\cos(n\pi)}{n-1}=\sum_{n=2}^\infty(-1)^n\underbrace{\frac{1}{n-1}}_{:=b_n}\]
+        Verifichiamo le ipotesi del criterio di Leibniz:
+        \begin{itemize}
+            \item $(b_n)_n$ decrescente? Sì. $\frac{1}{x}$ è decrescente per $x>0$.
+            \item $b_n>0\forall n$? Sì. $\frac{1}{x} x>0~~\forall x>0$.
+            \item $\lim_{n\to+\infty}\frac{1}{n+1}=0$? Sì.
+        \end{itemize}
+        Di conseguenza la serie converge per il criterio di Leibniz. Non converge assolutamente perchè è asintotica alla serie armonica $\scriptstyle \sum\limits_n\frac{1}{n}$.
+        \task $\sum_{n=1}^\infty\frac{2\cos n-1}{n(n+1)^2}$
+        \\La condizione necessaria è verificata. Studiamo l'assoluta convergenza. 
+        \[\sum_{n=1}^\infty\frac{|2\cos n-1|}{n(n+1)^2}\]
+        Applichiamo il criterio del confronto \[|2\cos n-1|\leq 2|\cos n|+1\leq 3\]
+        Di conseguenza
+        \[0\leq |a_n|\leq \frac{3}{n(n+1)^2}\sim \frac{3}{n^3}\]
+        Di conseguenza per il criterio del confronto (asintotico) converge assolutamente, quindi converge.
+    \end{tasks}
+    \item Studiare il carattere delle serie al variare di $\alpha\in \R$:
+    \begin{tasks}(3)
+        \task $\sum_{n=1}^\infty\frac{n+1}{n+n^\alpha}$
+        \task $\sum_{n=2}^\infty\frac{n^\alpha}{\alpha^n+1}~~~(\alpha>0)$
+        \task $\sum_{n=1}^\infty\frac{\alpha^{2n}}{3^n+3n}$
+    \end{tasks}
+    \item[\textit{\large Soluzione~}]~
+    \begin{tasks}(1)
+        \task $\sum_{n=1}^\infty\frac{n+1}{n+n^\alpha}$
+        La condizione necessaria è verificata. Osserviamo che il numeratore $n+1\sim n$. Per quanto riguarda il denominatore
+        \[n^2+n^\alpha\sim\begin{cases}
+            n^2&\se \alpha<2\\
+            2n^2\se \alpha=2\\
+            n^\alpha \se \alpha>2
+        \end{cases}\]
+        Studiamo ora la convergenza
+        \begin{enumerate}
+            \item Caso $\alpha<2$ (analogamente $\alpha=2)$:
+                \[a_n=\frac{n}{n^2+n^\alpha}\sim \frac{n}{n^2}\sim \frac{1}{n}\]
+                La serie diverge per confronto asintotico con la serie armonica. 
+            \item Caso $\alpha>2$
+                \[a_n=\frac{n}{n^2+n^\alpha}\sim \frac{n}{n^\alpha}\sim \frac{1}{n^{\alpha-1}}\]
+                Siccome $\alpha >2$ per ipotesi, $\alpha-1>1$. La serie converge per confronto asintotico con la serie armonica generalizzata.
+        \end{enumerate}
+        \task $\sum_{n=2}^\infty\frac{n^\alpha}{\alpha^n+1}~~~(\alpha>0)$
+        \\Studiamo come si comporta il denominatore al variare di $\alpha$:
+        \[\alpha^{n}+1\sim\begin{cases}
+            \alpha^n&\se \alpha>1\\
+            2 &\se \alpha=1&\\
+            1 &\se \alpha<1
+        \end{cases}\]
+        Di consegnenza
+        \[a_n=\frac{n^\alpha}{\alpha^{n}+1}\sim\begin{cases}
+            \alpha^n&\se \alpha>1\\
+            2 &\se \alpha=1\\
+            1 &\se \alpha<1
+        \end{cases}\]
+        Se $\alpha\leq 1$ la condizione necessaria non è rispettata. Se $\alpha>1$ la serie converge per il criterio della radice $n$-esima.
+
+        \task $\sum_{n=1}^\infty\frac{\alpha^{2n}}{3^n+3n}$\\
+        \[a_n\sim\frac{\alpha^{2n}}{3^n}=\frac{(\alpha^2)^n}{3^n}=\left( \frac{\alpha}{3} \right)^n\]
+        È una serie geometrica che converge se la ragione è minore di 1. 
+        \[\frac{\alpha}{3}<1 ~~\Harr~~-\sqrt{3}<\alpha<\sqrt{3} \]
+    \end{tasks}
+    \item Determinare gli intervalli di convergenza delle seguenti serie di potenze.
+    \begin{tasks}(3)
+        \task $\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n}x^n$
+        \task $\sum_{n=1}^\infty\frac{4}{n^2}(x+1)^n$
+        \task $\sum_{n=1}^\infty\frac{1}{(n+1)^2}\left( \frac{x+1}{x-1} \right)^{n+1}$
+    \end{tasks}
+    \item[\textit{\large Soluzione~}]~
+    \begin{tasks}(1)
+        \task $\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n}x^n$
+        \[l=\lim_{n\to+\infty}\sqrt[n]{|a_n|}=\lim_{n\to+\infty}\sqrt[n]{\frac{1}{n}}=1\implies R=1\]
+        La serie converge se $|x|<1$. Rimangono da studiare i casi $x=1$ e $x=-1$:
+        \begin{itemize}
+            \item Se $x=1$, $\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n}$ converge per il criterio di Leibniz.
+            \item Se $x=-1$, $\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n}(-1^n)=\sum_{n=1}^{+\infty}\frac{\cancel{(-1)^{2n}}(-1)}{n}=\sum_{n=1}^{+\infty}-\frac{1}{n}$ diverge perchè è la serie armonica a meno di un segno.
+        \end{itemize}
+        \task $\sum_{n=1}^\infty\frac{4}{n^2}(x+1)^n$
+        \[l=\lim_{n\to+\infty}\sqrt[n]{|a_n|}=\lim_{n\to+\infty}\sqrt[n]{\frac{}{}}\]
+        \task $\sum_{n=1}^\infty\frac{1}{(n+1)^2}\left( \frac{x+1}{x-1} \right)^{n+1}$
+        \[l=\lim_{n\to+\infty}\sqrt[n]{|a_n|}=\lim_{n\to+\infty}\sqrt[n]{\frac{}{}}\]
+    \end{tasks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{enumerate}
+\end{document}

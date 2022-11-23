@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1668527257 "/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex" "main.pdf" "main" 1668527257
+["pdflatex"] 1668532704 "/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex" "main.pdf" "main" 1668532704
   "../lambdatex.sty" 1668174522 5301 9c2bfca8be54eefd83d9c2a1742bea7c ""
-  "/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex" 1668527256 11273 2890a8866f5ecd5215646515ba0ae120 ""
+  "/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex" 1668532703 11274 df57870feae4a510586246ae5c7aa995 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm" 1136768653 1536 12e8c510d3e158fdd0e9a42e75118bd9 ""
@@ -265,9 +265,9 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1664453371 2826443 79048ec7f4be5f4a69f553793af991de ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "main.aux" 1668527257 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main.aux" 1668532704 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1668527256 11273 2890a8866f5ecd5215646515ba0ae120 ""
+  "main.tex" 1668532703 11274 df57870feae4a510586246ae5c7aa995 ""
   (generated)
   "main.aux"
   "main.log"

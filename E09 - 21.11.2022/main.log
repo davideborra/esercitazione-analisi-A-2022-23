@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.29)  15 NOV 2022 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.29)  23 NOV 2022 12:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex"
-(/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex
+**"/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E09 - 21.11.2022/main.tex"
+(/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E09 - 21.11.2022/main.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -809,29 +809,152 @@ Package: amsthm 2020/05/29 v2.20.6
 \c@exc=\count348
 \c@axiom=\count349
 \c@corollary=\count350
-) (./main.aux)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/tasks/tasks.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2022-01-12 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen316
+\l__xtemplate_tmp_int=\count351
+\l__xtemplate_tmp_muskip=\muskip18
+\l__xtemplate_tmp_skip=\skip141
+)
+Package: tasks 2022/01/08 v1.4a lists with columns filled horizontally
+\g__tasks_total_items_int=\count352
+\l__tasks_columns_int=\count353
+\g__tasks_rows_int=\count354
+\g__tasks_current_col_num_int=\count355
+\g__tasks_current_row_num_int=\count356
+\l__tasks_item_columns_int=\count357
+\g__tasks_env_int=\count358
+\l__tasks_start_int=\count359
+\l__tasks_item_indent_dim=\dimen317
+\l__tasks_item_default_indent_dim=\dimen318
+\l__tasks_item_width_dim=\dimen319
+\l__tasks_label_width_dim=\dimen320
+\l__tasks_label_default_width_dim=\dimen321
+\l__tasks_label_offset_dim=\dimen322
+\l__tasks_label_default_offset_dim=\dimen323
+\l__tasks_column_sep_dim=\dimen324
+\l__tasks_correction_dim=\dimen325
+\l__tasks_full_width_dim=\dimen326
+\l__tasks_after_item_skip=\skip142
+\l__tasks_custom_after_item_skip=\skip143
+\l__tasks_before_list_skip=\skip144
+\l__tasks_after_list_skip=\skip145
+\l__tasks_item_coffin=\box83
+\l__tasks_label_coffin=\box84
+\c@task=\count360
+\l__tasks_tmpa_int=\count361
+\l__tasks_tmpb_int=\count362
+\l__tasks_tmpa_coffin=\box85
+\l__tasks_tmpa_box=\box86
+
+Package xtemplate Info: Declaring object type 'tasks' taking 3 argument(s) on
+(xtemplate)             line 450.
+
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/tasks/tasks.cfg)) (/usr/local/texlive/2022/texmf-dist/tex/latex/exsheets/exsheets.sty
+Package: exsheets 2019/09/30 v0.21k Yet another package for the creation of exercise sheets and exams.
+\l__exsheets_tmpa_int=\count363
+\l__exsheets_tmpb_int=\count364
+\l__exsheets_tmpc_int=\count365
+\l__exsheets_tmpd_int=\count366
+\l__exsheets_tmpe_int=\count367
+\g__exsheets_tmpa_int=\count368
+\l__exsheets_tmpa_dim=\dimen327
+\l__exsheets_tmpb_dim=\dimen328
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\l__exsheets_variations_int=\count369
+\g__exsheets_questions_id_int=\count370
+\g__exsheets_questions_used_int=\count371
+\l__exsheets_include_random_int=\count372
+\l__exsheets_questions_set_int=\count373
+\g__exsheets_select_random_int=\count374
+\g__exsheets_selection_number_int=\count375
+\l__exsheets_counter_ch_int=\count376
+\l__exsheets_current_ch_int=\count377
+\l__exsheets_counter_sec_int=\count378
+\l__exsheets_current_sec_int=\count379
+\l_exsheets_counter_qu_int=\count380
+\l__exsheets_questions_skip_below_dim=\dimen329
+\l__exsheets_solutions_skip_below_dim=\dimen330
+\l__exsheets_blank_dim=\dimen331
+\l__exsheets_blank_line_increment_dim=\dimen332
+\l__exsheets_blank_line_minimum_length_dim=\dimen333
+\l__exsheets_blank_box=\box87
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/cntformats/cntformats.sty
+Package: cntformats 2014/07/20 v0.7 A different way to read counters. (CN)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/cnltx/cnltx-base.sty
+Package: cnltx-base 2019/11/01 v0.15 LaTeX tools and documenting facilities (CN)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks54
+\pgfopts@list@add@b@toks=\toks55
+)
+\c@cnltx@tmpa=\count381
+\c@cnltx@tmpb=\count382
+\c@cnltx@tmpc=\count383
+\cnltx@tmpa@length=\skip146
+\cnltx@tmpb@length=\skip147
+\cnltx@tmpc@length=\skip148
+))
+\c@question=\count384
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/exsheets/exsheets_headings.def
+File: exsheets_headings.def  2019/09/30 v0.21k ExSheets headings object
+\l__exsheets_heading_above_dim=\dimen334
+\l__exsheets_heading_below_dim=\dimen335
+\l__exsheets_heading_main_coffin=\box88
+\l__exsheets_heading_pre_coffin=\box89
+\l__exsheets_heading_post_coffin=\box90
+\l__exsheets_heading_title_coffin=\box91
+\l__exsheets_heading_number_coffin=\box92
+\l__exsheets_heading_points_coffin=\box93
+\l__exsheets_heading_subtitle_coffin=\box94
+
+Package xtemplate Info: Declaring object type 'exsheets-heading' taking 5
+(xtemplate)             argument(s) on line 184.
+
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/exsheets/exsheets_headings.cfg
+File: exsheets_headings.cfg  2019/09/30 v0.21k ExSheets headings instances 
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box95
+\UL@hyphenbox=\box96
+\UL@skip=\skip149
+\UL@hook=\toks56
+\UL@height=\dimen336
+\UL@pe=\count385
+\UL@pixel=\dimen337
+\ULC@box=\box97
+Package: ulem 2019/11/18
+\ULdepth=\dimen338
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+)) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Info: Redefining \it@ocap on input line 11.
-LaTeX Info: Redefining \it@ccap on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Info: Redefining \it@ocap on input line 14.
+LaTeX Info: Redefining \it@ccap on input line 14.
 
 
 File italian.ldf warning: 
@@ -839,7 +962,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 11.
+italian.ldf    on input line 14.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -877,17 +1000,17 @@ italian.ldf    on input line 11.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count351
-\scratchdimen=\dimen316
-\scratchbox=\box83
-\nofMPsegments=\count352
-\nofMParguments=\count353
-\everyMPshowfont=\toks54
-\MPscratchCnt=\count354
-\MPscratchDim=\dimen317
-\MPnumerator=\count355
-\makeMPintoPDFobject=\count356
-\everyMPtoPDFconversion=\toks55
+\scratchcounter=\count386
+\scratchdimen=\dimen339
+\scratchbox=\box98
+\nofMPsegments=\count387
+\nofMParguments=\count388
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count389
+\MPscratchDim=\dimen340
+\MPnumerator=\count390
+\makeMPintoPDFobject=\count391
+\everyMPtoPDFconversion=\toks58
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -904,7 +1027,7 @@ Package caption Info: End \AtBeginDocument code.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
 
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 14.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -912,97 +1035,66 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count357
+\c@section@level=\count392
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 14.
+LaTeX Info: Redefining \pageref on input line 14.
+LaTeX Info: Redefining \nameref on input line 14.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+
+Package exsheets Info: Loading custom configurations file
+(exsheets)             `exsheets_configurations.cfg'.
+
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/exsheets/exsheets_configurations.cfg
+File: exsheets_configurations.cfg 
+)
+Package translations Info: no dictionary file `translations-basic-dictionary-italian.trsl' found. on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 13.
+LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 16.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/yhmath/OMXyhex.fd
 File: OMXyhex.fd 
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
-)
-
-/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex:60: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60         \end{align*}
-                         \]
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1
+) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex:74: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74         \end{align*}
-                         \]
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex:92: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.92         \end{align*}
-                         \]
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 77--77
+ [] 
+ []
 
 [2]
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 121--121
+ [] 
+ []
 
-/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex:100: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E09 - 21.11.2022/main.tex:121: Extra alignment tab has been changed to \cr.
+<template> ...w@strut \hfil $\relax $\endtemplate 
                                                   
-l.100         \end{align*}
-                          \]
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.121     \end
+              {tasks}
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
 
 
-/Users/davideborra/Documents/GitHub/esercitazione-analisi-A-2022-23/E08 - 14.11.2022/main.tex:107: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107         \end{align*}
-                          \]
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
 
-[3] [4] [5] (./main.aux)
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 141--141
+ [] 
+ []
+
+[3] [4] (./main.aux)
 
 Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -1013,18 +1105,18 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37284 strings out of 478268
- 853239 string characters out of 5846347
- 1243735 words of memory out of 5000000
- 54820 multiletter control sequences out of 15000+600000
- 480694 words of font info for 68 fonts, out of 8000000 for 9000
+ 40097 strings out of 478268
+ 929043 string characters out of 5846347
+ 1324857 words of memory out of 5000000
+ 57570 multiletter control sequences out of 15000+600000
+ 480800 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,18n,106p,881b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (5 pages, 198156 bytes).
+ 110i,15n,106p,899b,694s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
+Output written on main.pdf (4 pages, 196207 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 170 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

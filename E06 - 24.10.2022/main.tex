@@ -30,12 +30,12 @@ CdL in Matematica – a.a. 2022–2023}
         \item $\lim_{n\to+\infty}\left( \frac{1+n}{3+n} \right)^{n^2}=\left[ 1^\infty\right]=0^+$
         \[\left(\frac{1+n}{3+n}\right)^{n^2}=\left(\frac{\cancel{n}\left( 1+\frac{1}{n} \right)^n}{\cancel{n}\left( 1+\frac{3}{n} \right)^n}\right)^{n}\to \left( \frac{1}{e^2} \right)^n\to 0^+\]
         \item $\lim_{x\to+\infty}\left( \frac{1}{3x} \right)^{\frac{1}{\log(2x)}}=\left[ {0}^{0} \right]=\lim_{x\to+\infty}e^{\log\left( \frac{1}{3x} \right)^{\frac{1}{\log(2x)}}}=\lim_{x\to+\infty}e^{\frac{-\log(3x)}{\log(2x)}}=\lim_{x\to+\infty}e^{-\frac{\log 3+\log x}{\log 2+\log x}}=e^{-1}$
-        \item $\lim_{x\to0^+}\left( \frac{2^x+3^x}{2} \right)^\frac{1}{x}=\left[ 1^\infty\right]=e^{\frac{\log2}{2}+\frac{\log3}{2}}=\sqrt{6}$
-        \[\left( \frac{2^x+3^x}{2} \right)^\frac{1}{x}=e^{\log\left( \frac{2^x+3^x}{2} \right)^\frac{1}{x}}=e^{\frac{1}{x}\log\left( \frac{2^x+3^x}{2} \right)}=e^{\overbrace{\frac{\log\left( 1+\frac{2^x+3^x}{2}-1 \right)}{\frac{2^x+3^x}{2}-1}}^{\to1}\cdot\overbrace{\frac{\frac{2^x+3^x}{2}-1}{x}}^{\to\frac{\log2}{2}+\frac{\log3}{2}}}\to e^{\frac{\log2}{2}+\frac{\log3}{2}}\]
+        \item $\lim_{x\to0^+}\left( \frac{2^x+3^x}{2} \right)^\frac{1}{x}=\left[ 1^\infty\right]=e^{\frac{\log2}{2}+\frac{\log3}{2}}=\sqrt{6}$ Infatti:
+        \[\left( \frac{2^x+3^x}{2} \right)^\frac{1}{x}=e^{\log\left( \frac{2^x+3^x}{2} \right)^\frac{1}{x}}=e^{\frac{1}{x}\log\left( \frac{2^x+3^x}{2} \right)}=e^{\overbrace{\frac{\log\left( 1+\frac{2^x+3^x}{2}-1 \right)}{\frac{2^x+3^x}{2}-1}}^{\to1}\cdot\overbrace{\frac{\frac{2^x+3^x}{2}-1}{x}}^{\to\frac{\log2}{2}+\frac{\log3}{2}}}\to e^{\frac{\log2}{2}+\frac{\log3}{2}}\]poiché
         \[\frac{\frac{2^x+3^x}{2}-1}{x}=\underbrace{\frac{2^x-1}{2x}}_{\to\frac{\log2}{2}}+\underbrace{\frac{3^x-1}{2x}}_{\to\frac{\log3}{2}}\to \frac{\log2}{2}+\frac{\log3}{2}\]
     \end{enumerate}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \item Calcolare al variare di $\lambda\in \R$
+    \item Calcolare al variare di $\gamma\in \R$
     \begin{enumerate}
         \item $\lim_{x\to 0^+}\frac{\tg^22x-\sin^22x}{x^\gamma}$
         \item $\lim_{x\to +\infty}\left( \frac{3+x^\gamma}{2+x} \right)^x$
@@ -51,7 +51,7 @@ CdL in Matematica – a.a. 2022–2023}
                 \frac{\tg^22x-\sin^22x}{x^\gamma}=\frac{\sin^22x\left( \frac{1}{\cos^2x}-1 \right)}{x^\gamma}=\frac{\sen^22x}{x^\gamma}\underbrace{\left( \frac{1-\cos^22x}{\cos^22x} \right)}_{\tg^2 x}=\frac{\sin^22x\tg^22x}{x^\gamma}=
             \]
             \[
-                =\underbrace{\left( \frac{\sin2x}{2x} \right)}_1\underbrace{\left( \frac{\sin2x}{2x}\right)}_1\cdot 16x^{4-\gamma}
+                =\underbrace{\left( \frac{\tg2x}{2x} \right)^2}_{\to1}\underbrace{\left( \frac{\sin2x}{2x}\right)^2}_{1\to}\cdot 16x^{4-\gamma}
             \]
             Quindi si ha
             \[\lim_{x\to 0^+}\frac{\tg^22x-\sin^22x}{x^\gamma}=\begin{cases}
@@ -90,13 +90,13 @@ CdL in Matematica – a.a. 2022–2023}
     \begin{itemize} 
         \item Passo base: $a_1\leq a_2~~\Larr~~a_1=1~~~a_2=\sqrt{2}$
         \item Passo induttivo:  $a_{n+1}\geq a_n ~~\Rarr~~ a_{n+2}\geq a_{n+1}$
-        \[\Harr ~~ \sqrt{1+a_{n+1}}\geq \sqrt{1+a_n}~~\Harr~~\cancel{1}+a_{n+1}\geq\cancel{1}+a_n~~~\Harr~~~a_{n+1}\geq a_n\]
+        \[a_{n+2}\geq a_{n+1}~~\Harr ~~ \sqrt{1+a_{n+1}}\geq \sqrt{1+a_n}~~\Harr~~\cancel{1}+a_{n+1}\geq\cancel{1}+a_n~~~\Harr~~~a_{n+1}\geq a_n\]
     \end{itemize}
-    La funzione è effettivamente crescente, quindi per il teorema dell'esistenza del limite per successioni monotone, $\exists \lim_{n\to+\infty}a_n$. Per dimostrare che il limite è finito, bisogna dimostrare che $(a_n)_n$ è limitata. Siccome è crescente, è limitata inferiormente. Dimostriamo che è limitata superiormente, ovvero che $\exists M:a_n\leq M~\forall n$. Dato un $M\geq 1$ arbitrario, provare che \[\forall n, ~a_n\leq M\]. Usiamo il principio di induzione:
+    La successione è effettivamente crescente, quindi per il teorema dell'esistenza del limite per successioni monotone, $\exists \lim_{n\to+\infty}a_n$. Per dimostrare che il limite è finito, bisogna dimostrare che $(a_n)_n$ è limitata. Siccome è crescente, è limitata inferiormente. Dimostriamo che è limitata superiormente, ovvero che $\exists M:a_n\leq M~\forall n$. Dato un $M\geq 1$ arbitrario, provare che \[\forall n, ~a_n\leq M\]. Usiamo il principio di induzione:
     \begin{itemize} 
         \item Passo base: $(n=1) ~~a_1\leq M~~\Larr~~a_1=1\leq M$
         \item Passo induttivo:  $a_n\leq M ~~\Rarr~~ a_{n+1}\leq M$
-        \[\Harr ~~ \sqrt{1+a_{n}}\leq M~~\Harr~~1+a_{n}\leq M
+        \[a_{n+1}\leq M~~\Harr ~~ \sqrt{1+a_{n}}\leq M~~\Harr~~1+a_{n}\leq M
         ^2~~~\Harr~~~a_{n}\leq M
         ^2-1\]
         Ci basta quindi dimostrare che $a_n\leq M ~~\Rarr~~ a_{n}\leq M^2-1$. Basta scegliere un qualsiasi $M$ tale che $M\leq M^2-1$, ad esempio $M=2$. 
@@ -106,12 +106,14 @@ CdL in Matematica – a.a. 2022–2023}
         L'insieme degli $M$ che abbiamo appena individuato è un insieme dei maggioranti di $(a_n)_n$, ma non è detto che siano \emph{tutti} i maggioranti.
     \end{oss}
     Calcoliamo quindi il limite. Se esiste (devo averlo dimostrato precedentemente!) \[l=\lim_{n\to+\infty}a_n=\lim_{n\to+\infty}a_{n+1}\]
-    \[a_{n+1}=\sqrt{1+a_n}~~\overset{n\to+\infty}\Longrightarrow~~l=\sqrt{1+l}~~\overset{l\geq0}\Longrightarrow~~l^2=1+l~~\Harr\]
-    \[\Harr~~l=\frac{1+\sqrt{5}}{2}=\langle\begin{array}{l}
-        \boxed{1,6180339887\dots=\varphi}\\
-        \cancel{-0,6180339887\dots=\Phi}
-    \end{array}\]
-    \[l=\varphi\]
+    \[a_{n+1}=\sqrt{1+a_n}~~\overset{n\to+\infty}\Longrightarrow~~l=\sqrt{1+l}~~\Longrightarrow~~l^2=1+l~~\Harr\]
+    \[\Harr~~l=\frac{1+\sqrt{5}}{2}=
+    %\langle\begin{array}{l}
+    %    \boxed{1,6180339887\dots=\varphi}\\
+    %    \cancel{-0,6180339887\dots=\Phi}
+    %\end{array}
+    \]
+    %\[l=\varphi\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item Sia $f: \R\to \R$ definita come \[f(x)=\begin{cases}
         \frac{\sin x^2}{x(\sqrt{x+1}-1)}&\text{se }x>0\\
@@ -130,7 +132,7 @@ CdL in Matematica – a.a. 2022–2023}
 \begin{enumerate}
     \item Sia $f(x)=x^5+2x^3-2$. Dimostrare che $\exists!x_0\in \R:f(x_0)=0$ e determinare un intervallo $]a,b[$ con $ b-a\leq{\scriptstyle\frac{1}{4}}$ tale che $x_0\in]a,b[$
     \item Sia $f(x)=x^3+x+1$ su $\R$. Dimostrare che $f$ è invertibile e calcolare $\lim_{y\to \infty}f^{-1}\left( \frac{3y}{y+4} \right)$.
-    \item Sia $f:\R\to\R$. Dimostrare che se $\exists ~]a,b[\subseteq \R, x_0\in ~]a,b[\text{ t.c. }f|_{]a,b[\setminus x_0}>0$
+
 \end{enumerate}
 \item[\textit{\large Soluzione~}]~ 
     \begin{enumerate}
@@ -140,7 +142,6 @@ CdL in Matematica – a.a. 2022–2023}
         \item È iniettiva perché è strettamente monotona in quanto somma di funzioni strettamente monotone. È inoltre suriettiva in quanto continua e $\lim_{x\to+\infty}f(x)=+\infty$ e $\lim_{x\to-\infty}f(x)=-\infty$ (per il teorema dei valori intermedi $f(\R)=\R$). Di conseguenza è biiettiva e quindi invertibile su $\R$.
         \[\lim_{y\to \infty}f^{-1}\left( \frac{3y}{y+4} \right)=f^{-1}\left( \lim_{y\to \infty}\frac{3y}{y+4} \right)=f^{-1}(3)=1\]
         Infatti siccome $f$ è continua e definita su un intervallo, anche la sua inversa è continua.
-        \item Le tempistiche della lezione non hanno permesso lo svolgimento di questo punto.
         
     \end{enumerate}
     
