@@ -1,5 +1,4 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
 \usepackage{../lambdatex} %disponibile all'indirizzo http://lambdamath.altervista.it/esercizi/lambdatex.sty
 \usepackage{tasks}
 \usepackage{exsheets}
@@ -97,13 +96,13 @@ CdL in Matematica – a.a. 2022–2023}
                 La serie diverge per confronto asintotico con la serie armonica. 
             \item Caso $\alpha>2$
                 \[a_n=\frac{n}{n^2+n^\alpha}\sim \frac{n}{n^\alpha}\sim \frac{1}{n^{\alpha-1}}\]
-                Siccome $\alpha >2$ per ipotesi, $\alpha-1>1$. La serie converge per confronto asintotico con la serie armonica generalizzata.
+                Siccome $\alpha >2$ per ipotesi, $\alpha-1>1$. La serie converge per confronto asintotico con\\ la serie armonica generalizzata.
         \end{enumerate}
         \task $\sum_{n=2}^\infty\frac{n^\alpha}{\alpha^n+1}~~~(\alpha>0)$
         \\Studiamo come si comporta il denominatore al variare di $\alpha$:
         \[\alpha^{n}+1\sim\begin{cases}
             \alpha^n&\se \alpha>1\\
-            2 &\se \alpha=1&\\
+            2 &\se \alpha=1\\
             1 &\se \alpha<1
         \end{cases}\]
         Di consegnenza
@@ -132,12 +131,78 @@ CdL in Matematica – a.a. 2022–2023}
         La serie converge se $|x|<1$. Rimangono da studiare i casi $x=1$ e $x=-1$:
         \begin{itemize}
             \item Se $x=1$, $\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n}$ converge per il criterio di Leibniz.
-            \item Se $x=-1$, $\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n}(-1^n)=\sum_{n=1}^{+\infty}\frac{\cancel{(-1)^{2n}}(-1)}{n}=\sum_{n=1}^{+\infty}-\frac{1}{n}$ diverge perchè è la serie armonica a meno di un segno.
+            \item Se $x=-1$, $\sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n}(-1^n)=\sum_{n=1}^{+\infty}\frac{\cancel{(-1)^{2n}}(-1)}{n}=\sum_{n=1}^{+\infty}-\frac{1}{n}$ diverge perchè è la serie\\ armonica a meno di un segno.
         \end{itemize}
         \task $\sum_{n=1}^\infty\frac{4}{n^2}(x+1)^n$
-        \[l=\lim_{n\to+\infty}\sqrt[n]{|a_n|}=\lim_{n\to+\infty}\sqrt[n]{\frac{}{}}\]
-        \task $\sum_{n=1}^\infty\frac{1}{(n+1)^2}\left( \frac{x+1}{x-1} \right)^{n+1}$
-        \[l=\lim_{n\to+\infty}\sqrt[n]{|a_n|}=\lim_{n\to+\infty}\sqrt[n]{\frac{}{}}\]
+        \\Poniamo $y:=x+1$
+        \[l=\lim_{n\to+\infty}\sqrt[n]{|a_n|}=\lim_{n\to+\infty}\sqrt[n]{\frac{4}{n^2}}~\implies~R=\frac{1}{l}=1\]
+        La serie converge se \[-1<y<1~~\Harr~~-1<x+1<1~~\Harr~~-2<x<0\]
+        Rimangono da verificare gli estremi
+        \begin{itemize}
+            \item Se $x=-2$, la serie $\sum_n(-1)^n\frac{4}{n^2}$ converge assolutamente per confronto con la serie\\ armonica generalizzata.
+            \item Se $x=0$, la serie $\sum_n\frac{4}{n^2}$ converge per confronto con la serie armonica generalizzata.
+        \end{itemize}
+        \task $\sum_{n=1}^\infty\frac{1}{(n+1)^2}\left( \frac{x+1}{x-1} \right)^{n+1}$\\
+        Poniamo $y:=\frac{x+1}{x-1}$ e $s:=n+1$ La serie si riscrive equivalentemente come $\sum_{s=0}^\infty\frac{1}{s^2}y^{s}$
+        \[l=\lim_{s\to+\infty}\sqrt[s]{|a_s|}=\lim_{s\to+\infty}\sqrt[s]{\frac{1}{s^2}}=1~\implies~R=1\]
+        La serie converge se
+        \[-1<y<1~~\Harr~~\begin{cases}
+            \frac{x+1}{x-1}>-1\\
+            \frac{x+1}{x-1}<1
+        \end{cases}\Harr\begin{cases}
+            \frac{x+1-x+1}{x-1}<0\\
+            \frac{x+x+1-1}{x-1}>0
+        \end{cases}\Harr\begin{cases}
+            \frac{2}{x-1}<0\\
+            \frac{2x}{x-1}>0
+        \end{cases}\Harr\]\[\Harr
+        \begin{cases}
+            x<1\\
+            x<0\lor x>1
+        \end{cases}\Harr x<0\]
+        Rimangono da studiare gli estremi:
+        \[y=1~~\Harr~~\frac{x+1}{x-1}=1~~\Harr~~x+1=x-1~~\Harr~~2=0~~\nexists x \in \R\]
+        \[y=-1~~\Harr~~\frac{x+1}{x-1}=-1~~\Harr~~\frac{x=0}{}\]
+        Studiamo quindi la convergebnza quando $x=0$. La serie diventa
+        \[\sum_{s=0}^\infty\frac{1}{s^2}(-1)^{s}\]
+        che converge assolutamente per confronto con la serie armonica generalizzata. Di conseguenza la serie data converge se e solo se $x\leq 0$.
+    \end{tasks}
+    \item Studiare il carattere delle seguenti serie
+    \begin{tasks}(3)
+        \task $\sum_{n=1}^\infty\frac{1+\cos n}{1-\sen n}$
+        \task $\sum_{n=1}^\infty\left( \sen\left( \frac{n+1}{n+7} \right) \right)^n$
+        \task $\sum_{n=0}^\infty\frac{\beta^n+2^n}{\beta^n+4^n}~~~~~(\beta\geq0)$
+    \end{tasks}
+    \item[\textit{\large Soluzione~}]~
+    \begin{tasks}(1)
+        \task $\sum_{n=1}^\infty\frac{1+\cos n}{1-\sen n}$\\
+        Non è rispettata la condizione necessaria: 
+        \[\nexists \lim_{n\to+\infty}\frac{1+\cos x}{1-\sen x}\]
+        \task $\sum_{n=1}^\infty\left( \sen\left( \frac{n+1}{n+7} \right) \right)^n$\\
+        \[\frac{n+1}{n+7}\sim 1~~~\implies ~~~\sen \left( \frac{n+1}{n+7} \right)\sim \sin(1)~~~\implies~~~\left( \sen\left( \frac{n+1}{n+7} \right) \right)^n\sim \sin^n(1)\]
+        Si tratta quindi di una serie geometrica con ragione $\sen(1)<1$ che quindi converge.
+        \task $\sum_{n=0}^\infty\frac{\beta^n+2^n}{\beta^n+4^n}~~~~~(\beta\geq0)$\\
+        Studiamo separatamente numeratore e denominatore al variare di $\beta$
+        \[\beta^n+2^n\sim \begin{cases}
+            \beta^n&\se \beta>2\\
+            2^{n+1}&\se \beta=2\\
+            2^n&\se \beta<2
+        \end{cases}\]
+        \[\beta^n+4^n\sim \begin{cases}
+            \beta^n&\se \beta>4\\
+            2\cdot 4^{n}&\se \beta=4\\
+            4^n&\se \beta<2
+        \end{cases}\]
+        Quindi
+        \[a_n\sim\begin{cases}
+            \left(\frac{1}{2}\right)^n&\se \beta <2\\
+            2\left(\frac{1}{2}\right)^n&\se \beta =2\\
+            \left(\frac{\beta}{4}\right)^n&\se 2<\beta <4\\
+            \frac{1}{2} & \se \beta=4\\
+            1&\se \beta>4
+        \end{cases}\]
+        Nei casi in cui $\beta <4$ la serie è asintotica ad una serie geometrica di ragione $<1$, quindi convergente.
+        Nei casi in cui $\beta\geq 4$ non è rispettata la condizione necessaria, quindi la serie non converge.
     \end{tasks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
