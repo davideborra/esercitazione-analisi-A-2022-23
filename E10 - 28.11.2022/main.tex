@@ -38,9 +38,9 @@ CdL in Matematica – a.a. 2022–2023}
     \[\mathcal{D}_\varepsilon=\left\{a,x_0-\frac{\epsilon}{4h(x_0)},x_0+\frac{\epsilon}{4h(x_0)}, b\right\}\]
     Si ottiene che 
     \[s(\mathcal{D}_\varepsilon, h)=0\]
-    infatti l'$\inf$ di qualsiasi intervallo è 0. Si ha inoltre che
-    \[\begin{align}S(\mathcal{D}_\epsilon, h)&=\cancel{(x_1-a)\sup_{[a,x_1]}f}(x_2-x_1)(h(x_0))+\cancel{(b-x_2)\sup_{[x_2,b]}f}=(x_1-x_2)(h(x_0))=\\&=\left[\cancel{x_0}+\frac{\varepsilon}{4h(x_0)}-x_0+\frac{\varepsilon}{4h(x_0)}\right]h(x_0)=h(x_0)\frac{\varepsilon}{2h(x_0)}=\frac{\varepsilon}{2}<\varepsilon\end{align}\]
-$h$ è quindi Riemann integrabile, di conseguenza per linearità $g=f-h$ è Riemann integrabile. Rimane ora da dimostrare che $\int_a^bf(x)dx=\int_a^bg(x)dx$. Dimostriamo equivalentemente che $\int_a^bh(x)dx=0$. Osserviamo che le somme inferiori sono sempre 0, mentre le somme superiori risultano $\frac{\varepsilon}{2}$, quindi facendo tendere $\varepsilon$ a 0 si ottiene che 
+    infatti l'$\inf$ di $h$ su qualsiasi intervallo è 0. Si ha inoltre che
+    \[\begin{aligned}S(\mathcal{D}_\epsilon, h)&=\cancel{(x_1-a)\sup_{[a,x_1]}f}+(x_2-x_1)h(x_0)+\cancel{(b-x_2)\sup_{[x_2,b]}f}=(x_1-x_2)(h(x_0))=\\&=\left[\cancel{x_0}+\frac{\varepsilon}{4h(x_0)}-x_0+\frac{\varepsilon}{4h(x_0)}\right]h(x_0)=h(x_0)\frac{\varepsilon}{2h(x_0)}=\frac{\varepsilon}{2}<\varepsilon\end{aligned}\]
+$h$ è quindi Riemann integrabile, di conseguenza per linearità $g=f-h$ è Riemann integrabile. Rimane ora da dimostrare che $\int_a^bf(x)dx=\int_a^bg(x)dx$. Dimostriamo equivalentemente che $\int_a^bh(x)dx=0$. Osserviamo che le somme inferiori sono sempre 0, mentre le somme superiori risultano limitate dall'alto da $\frac{\varepsilon}{2}$, quindi facendo tendere $\varepsilon$ a 0 si ottiene che 
 \[0=s(\mathcal{D})\leq \int_a^bh(x)dx\leq \frac{\varepsilon}{2}\]
 \[\implies \int_a^bh(x)dx=0\]
 \end{proof}
@@ -48,10 +48,10 @@ $h$ è quindi Riemann integrabile, di conseguenza per linearità $g=f-h$ è Riem
 \item Sia $f:[a,b]\to\R$ continua. Dimostrare che se $f(x)\geq 0 ~~\forall x  \in [a,b]$ e $\int_a^bf(x)dx=0$, allora $f(x)=0$ ovunque. 
 \item[\textit{\large Soluzione~}]~
 \begin{proof}
-    Si procede per assurdo: supponiamo che $\exists x_0\in [a,b]:f(x_0)=0$. In particolare $f(x_0)>0$ per ipotesi. Per il teorema della permanenza del segno \[\exists \delta >0:[x_0-\delta,x_0+\delta]\subseteq [a,b] \land f(x)>0\forall x\in [x_0-\delta,x_0+\delta]\]. Per lo spezzamento si ha\[\int_a^bf(x)dx=\int_a^{x_0-\delta}f(x)dx+\int_{x_0-\delta}^{x_0+\delta}f(x)dx+\int_{x_0+\delta}^bf(x)dx\geq \int_{x_0-\delta}^{x_0+\delta}f(x)dx\]
+    Si procede per assurdo: supponiamo che $\exists x_0\in [a,b]:f(x_0)\neq 0$. In particolare $f(x_0)>0$ per ipotesi. Per il teorema della permanenza del segno \[\exists \delta >0:[x_0-\delta,x_0+\delta]\subseteq [a,b] \land f(x)>0~~\forall x\in [x_0-\delta,x_0+\delta]\]. Per lo spezzamento si ha\[\int_a^bf(x)dx=\int_a^{x_0-\delta}f(x)dx+\int_{x_0-\delta}^{x_0+\delta}f(x)dx+\int_{x_0+\delta}^bf(x)dx\geq \int_{x_0-\delta}^{x_0+\delta}f(x)dx\]
     Perchè gli altri due integrali sono non negativi per ipotesi.
     \[\int_{x_0-\delta}^{x_0+\delta}f(x)dx=\sup s(\mathcal{D},f)\geq2\delta \inf_{[x_0-\delta, x_0+\delta]}f=2\delta \inf_{[x_0-\delta, x_0+\delta]}f>0\]
-    Assurdo
+    Poiché $\inf_{[x_0-\delta, x_0+\delta]}f=\min_{[x_0-\delta, x_0+\delta]}f>0$, ottengo una contraddizione.
 \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Scrivere i primi due termini dello sviluppo di Taylor centrato in $x_0=0$ della funzione
@@ -84,11 +84,11 @@ Quindi
 \item[\textit{\large Soluzione~}]~
 \begin{enumerate}
     \item Sia $f(x)=\int_0^{x}\cos(2t)dt~~\implies~~g(x)=f(x^2)$. Di conseguenza $g'(x)=2xf'(x)=2xcos(2x^2)$. $x$ è punto critico $\Harr$
-    \[\begin{align}
+    \[\begin{cases}{ll}
         \Harr~& x=0\lor cos(2x^2)=0\\
         \Harr~& x=0\lor 2x^2=\frac{\pi}{2}+k\pi ~~~(k\in \Z)\\
         \Harr~& x=0\lor x=\pm\sqrt{\frac{\pi}{4}+k\frac{\pi}{2}} ~~~(k\in \N)
-    \end{align}\]
+    \end{cases}\]
     \item ~\[\lim_{x\to0^+}\frac{g(x)-x^2}{x^6}=\left[\frac{0}{0}\right]\overset{\text{H}}{=}\lim_{x\to0^+}\frac{g'(x)-2x}{6x^5}=\lim_{x\to0^+}\frac{2x\cos (2x^2)-2x}{6x^5}=\lim_{x\to0^+}\frac{\cos(2x^2)-1}{4x^4}\frac{4}{3}=\frac{2}{3}\]
 \end{enumerate}
 
@@ -105,8 +105,8 @@ Cominciamo rappresentando $\cos 2x$
         axis lines=middle,
         ymajorgrids=true,
         xmajorgrids=true,
-        xmin=-1.0,
-        xmax=4.0,
+        xmin=-1.5,
+        xmax=4.5,
         ymin=-1.5,
         ymax=1.5,
         xtick={-1.0,-0.0,...,4.0},
@@ -124,14 +124,14 @@ Prima di tutto osserviamo che la funzione integrale ha una radice in $x=\frac{\p
         axis lines=middle,
         ymajorgrids=true,
         xmajorgrids=true,
-        xmin=-1.0,
-        xmax=4.0,
-        ymin=-1.5,
+        xmin=-1.5,
+        xmax=4.5,
+        ymin=-2.2,
         ymax=1.5,
         xtick={-1.0,-0.0,...,4.0},
-        ytick={-1.0,-0.0,...,1.0},]
+        ytick={-2.0,-1.0,...,1.0},]
         \draw [samples=100, domain=-1:4, color=blue] plot(\x,{cos(2*(\x*180)/pi)});
-        \draw [samples=100, domain=pi/4:5*pi/4, color=red] plot(\x,{sin(2*(\x*180)/pi)/2-.5)});
+        \draw [samples=100, domain=pi/4:5*pi/4, color=red] plot(\x,{2*sin(2*(\x*180)/pi)/2-1)});
     \end{axis}
     \end{tikzpicture}
 \end{figure}
