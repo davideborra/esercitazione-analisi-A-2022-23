@@ -146,8 +146,21 @@ Quindi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Studiare la convergenza di $\int_1^2\frac{1-\cos x}{(x^2-1)^\alpha(2-x)^{3-\alpha}}dx$ al variare di $\alpha \in \R$
-\item[\textit{\large Soluzione~}]~
-
+\item[\textit{\large Soluzione~}]~Riscriviamo l'integrale equivalentemente e sostituiamo $x-1=t$, $t=x+1$, $dx=dt$
+\[\int_1^2\frac{1-\cos x}{(x^2-1)^\alpha(2-x)^{3-\alpha}}dx=\int_1^2\frac{1-\cos x}{(x-1)^\alpha(x+1)^\alpha(2-x)^{3-\alpha}}dx=\int_0^1\frac{1-\cos x}{(t)^\alpha(t+2)^\alpha(1-t)^{3-\alpha}}dx\]
+Chiamiamo $f(t)$ la funzione integranda
+\begin{itemize}
+    \item In $t=0$
+    \[f(t)\sim\frac{1-\cos t}{t^\alpha}\cdot\frac{1}{2^\alpha}\]
+    Sviluppiamo il coseno
+    \[\frac{1-\cos t}{t^\alpha}=\frac{\frac{t^2}{2}+o(t^2)}{t^2t^{\alpha-2}}\sim \frac{2}{t^{\alpha2}}\]
+    L'integrale converge se e solo se $\alpha-2<1~~\Harr~~\alpha<3$
+    \item In $t=1$ osserviamo che $1-\cos t$, $t$ e $t+1$ non influiscono se non per costanti, quindi 
+    \[f(t)\sim \frac{1}{(1-t)^{3-\alpha}}\]
+    che converge se e solo se $3-\alpha <1~~\Harr~~\alpha>2$
+\end{itemize}
+Di conseguenza l'integrale converge se e solo se 
+\[2<\alpha<3\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
