@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage{../../LaTeX/lambdatex} %disponibile all'indirizzo http://lambdamath.altervista.it/esercizi/lambdatex.sty
+\usepackage{tasks}
+\usepackage{exsheets}
+\newcommand{\se}{\text{ se }}
+\renewcommand{\phi}{\varphi}
+\everymath{\displaystyle}
+
+
+\title{Università degli Studi di Trento - Dipartimento di Matematica\\
+CdL in Matematica – a.a. 2022–2023\\ Note esercitazione}
+\author{Esercitatore: Simone Verzellesi\thanks{Trascrizione a cura di Davide Borra}}
+\date{19 Dicembre 2022}
+\begin{document}
+\maketitle
+\lhead{Note esercitazione}
+\chead{Università degli Studi di Trento - Dipartimento di Matematica\\
+CdL in Matematica – a.a. 2022–2023}
+\rhead{19/12/2022}
+\setlength{\headheight}{30pt}
+\subsection*{Equazioni differenziali a variabili separabili}
+\begin{enumerate}[label=\textbf{Esercizio 13.\arabic*.},itemindent=*]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Risolvere il seguente problema di Cauchy
+\[\begin{cases}
+    y'=\frac{x}{y}\\
+    y(0)=1
+\end{cases}\]
+
+\item[\textit{\large Soluzione~}]~
+Troviamo l'integrale generale:
+\[\Harr ~~ y'y=-x~~~\Harr~~~\int y'y\d x=-\int x \d x~~~\Harr~~~\int y\d y =-\int x \d x~~\Harr~~~\frac{1}{2}y^2=-\frac{1}{2}x^2+c~~~\Harr\]
+\[\Harr~~~y(x)=\sqrt{-x^2+c}~~\lor~~ y=-\sqrt{-x^2+c}~~~\text{con}~-\sqrt{c}\leq x\leq \sqrt{c}, c\geq 0\]
+Per risolvere il problema di Cauchy impongo $y(0)=1$, quindi
+\[\pm\sqrt{c}=1\implies c=1\]
+Scegliendo la soluzione con segno positivo, per cui la soluzione al problema di Cauchy è la funzione $y(x)=\sqrt{1-x^2}$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Determinare l'integrale generale di 
+\[
+    (x^2+1)y'+y^2=0   
+\]
+e risolvere il problema di Cauchy
+\[\begin{cases}
+    (x^2+1)y'+y^2=0 \\
+    y(0)=1
+\end{cases}\]
+\item[\textit{\large Soluzione~}]~ Dobbiamo riportarci alla forma $\frac{y'}{g(y)}=h(x)$, ma per farlo dobbiamo poter dividere per $y$. Cerchamo quindi le soluzioni banali: Supponiamo $y$ costante, allora $y'=0$, di conseguenza
+\[y^2\equiv 0~~\Harr~~y\equiv 0\]
+Possiamo quindi procedere
+\[\frac{y'}{y}=-\frac{1}{1+x^2}~~~\Harr~~~\int\frac{y'}{y^2}\d x=-\int\frac{1}{1+x^2}\d x~~~\Harr~~~\int\frac{1}{y^2}\d y=-\arctg x+c~~~\Harr\]
+\[-\frac{1}{y}=-\arctg x +c~~~\Harr~~~y=\frac{1}{\arctg x +c}~~~~y: \R\setminus \{\tg c\}\to \R\]
+
+Per risolvere il PdC imponiamo la condizione iniziale.
+\[1=\frac{1}{\arctg 0 +c}~~~\Harr~~~c=1~~\implies~~y(x)=\frac{1}{\arctg x +1}\]
+Siccome la soluzione al problema di Cauchy è definita su un intervallo, che deve contenere lo $0$ e $\tg (-1)<0$, scelgo l'intervallo $x>\tg(-1)$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item trovare l'integrale generale di 
+\[
+    y'=xy^2
+\]
+e risolvere i problemi di Cauchy con
+\begin{tasks}(2)
+    \task $y(0)=1$ \task $y(0)=-1$
+\end{tasks}
+\item[\textit{\large Soluzione~}]~ Troviamo la soluione banale $y=0$, quindi è lecito assumere per le altre soluzioni $y\neq 0$
+\[\int \frac{y'}{y^2}\d x=\int x \d x~~~\Harr~~~-\frac{1}{y}=\frac{x^2}{2}+c~~~\Harr~~~y=-\frac{2}{x^2+2c}\]
+Per determinare il dominio dobbiamo separare i tre casi
+\[\dom y=\begin{cases}
+    \R &\se c>0\\
+    \R\setminus \{0\}&\se c=0\\
+    \R\setminus \{-\sqrt{-2c}, \sqrt{-2c}\}&\se c<0
+\end{cases}\]
+\begin{itemize}
+    \item Imponiamo la condizione $1=-\frac{2}{2c}~~\Harr~~c=-1$. La soluzione e quindi definita sull'intervallo $[-\sqrt{-2c}, \sqrt{-2c}]$
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+\subsection*{Equazioni differenziali lineari del primo ordine}
+
+\begin{lineframe}
+    \paragraph*{Ricorda} In generale, data l'equazione differenziale $y'=a(x)y+b(x)$, il suo integrale generale è una funzione del tipo 
+    \[y=e^{A(x)}\left( c+\int b(x)e^{-A(x)}\d x \right)\]
+    Dove $A(x)=\int a(x)\d x$
+\end{lineframe}
+
+\begin{enumerate}[label=\textbf{Esercizio 13.\arabic*.},itemindent=*]
+\setcounter{enumi}{3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Risolvere il seguente problema di Cauchy
+\[\begin{cases}
+    y'-y=1\\
+    y(0)=0
+\end{cases}\]
+\item[\textit{\large Soluzione~}]~Riscriviamo nella forma $y'=a(x)y+b(x)$, dove $a(x)=1$ e $b(x)=1$:
+\[y'=y+1\]
+\[A(x)=\int1\d x=x\]
+\[y(x)=e^x\left( c+\int e^{-x}\d x \right)=e^{x}\left( c+e^{-x}(-e^{-x}) \right)=ce^x-1\]
+Impongo la condizione 
+\[y(0)=c-1~~~\Harr~~~c=1~~~\implies ~~~y=e^{x}-1~~~~~y:\R\to\R\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Risolvere il seguente problema di Cauchy
+\[\begin{cases}
+    y'=\left( \sin x \right)y+\sin(2x)\\
+    y(0)=-2
+\end{cases}\]
+\item[\textit{\large Soluzione~}]~ 
+\[a(x)=\sen x~~~\implies~~~A(x)=\int a(x)\d x=\int \sen x \d x=-\cos x \d x\]
+\[b(x)=\sen (2x)\]
+L'integrale generale si ricava quindi da 
+\[y=e^{\sin x}\left( c+\int \sin (2x) e^{\cos x} \d x \right)\]
+\[\int \sen(2x)e^{\cos x}\d x=\int 2\cos x \sin x e^{\cos x}\d x=\]
+Pongo $t=\cos x$, quindi $\d t=-\sin t \d t$
+\[-2\int te^t\d t=-2\left( te^t-\int e^t\d t \right)=-2\left(te^t-e^t\right)=-2e^{\cos x}\cos x+2e^{\cos x}\]
+\[y(x)=e^{-\cos x}\left( c+2e^{\cos x}-2\cos xe^{\cos x} \right)=ce^{-\cos x}+2-2\cos x\]
+Imponiamo le condizioni $y(0)=-2$
+\[ce^{-1}=-2~~~\Harr~~~c=-2e\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Risolvere il seguente problema di Cauchy
+\[\begin{cases}
+    y'=y^2x\log x^2\\
+    y(1)=\lambda&\lambda \in \R
+\end{cases}\]
+\item[\textit{\large Soluzione~}]~
+Cerchiamo la soluzione banale. Se $y'\equiv 0$, allora $y\equiv 0$. È soluzione del problema di Cauchy se $\lambda=0$.
+Per trovare le altre soluzioni è quindi lecito assumere quindi $y\not\equiv 0$ e $\lambda \neq 0$
+
+\[\frac{y'}{y}=x\log x^2\]
+\[\int \frac{y'}{y^2}\d x=\int x\log x^2 x \d x~\underset{\text{pongo } t=x^2~\Rarr~\d t=2x\d x}{\Harr}~-\frac{1}{y}=\frac{1}{2}\int \log t \d t ~~~\Harr\]
+\[\int \log t\d t =t \log t-\int \frac{t}{t}\d t=t(\log t-1)\]
+\[-\frac{1}{2}={\frac{1}{2}x^2\log x^2-\frac{1}{2}x^2+c}\]
+\[y=-\frac{1}{\frac{1}{2}x^2\log x^2-\frac{1}{2}x^2+c}\]
+Per risolvere il problema di Cauchy imponiamo $y(1)=\lambda$
+\[\lambda =-\frac{1}{c-\frac{1}{2}}~~~\Harr~~~\frac{1}{2}-c=\frac{1}{\lambda}~~~\Harr~~~c=\frac{1}{2}-\frac{1}{\lambda}\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+\end{document}
