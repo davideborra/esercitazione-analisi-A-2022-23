@@ -32,16 +32,32 @@ CdL in Matematica – a.a. 2022–2023}
 \item[\textit{\large Soluzione~}]~
 \begin{enumerate}
     \item Studiare $f(s)$
+    \[f(s) = \begin{cases} \frac{e^{ - s} - 1}{s(s + 1)} &\se s > 0\\ \frac{e^{s} - 1}{s(s + 1)} &\se s < 0 \land s\neq - 1\end{cases} \]
     \begin{itemize}
         \item $\dom f=\R\setminus\{0,1\}$
         \item Segno di $f$:
         \[e^{-|s|}-1\leq 0~~\forall s\in \R\]
-        \[s(s+1)>0~~\Harr~~s<1\lor s>0\]
+        \[s(s+1)>0~~\Harr~~s<-1\lor s>0.\]
         Quindi
         \[f(s)>0 \se -1<s<0\]
-        \[f(s)<0 \se s<0 \lor s>-1\]
+        \[f(s)<0 \se s <- 1 \lor s > 0\]
+        \begin{figure}[h]
+            \centering
+            \begin{tikzpicture}
+                \draw[->](-2.5,0)--(1.5,0);
+                \node at(-1,0){$\circ$};
+                \node at(-1,-0.3){$-1$};
+                \node at(-0,0){$\circ$};
+                \node at(0,-0.3){$0$};
+                \node at(-1.75, 0.2){$- ~ ~-$};
+                \node at(0.75, 0.2){$- ~ ~-$};
+                \node at(-0.5, 0.2){$+$};
+                \node at(1.9, 0){$f(s)$};
+            \end{tikzpicture}
+        \end{figure}
         \item Limiti
         \[\lim_{s\to-\infty}f(s)=0^-\]
+        \[\lim_{s\to +\infty}f(s)=0^+\]
         \[\lim_{s\to1^-}f(s)=\left[ \frac{1-\frac{1}{e}}{0^-} \right]=-\infty\]
         \[\lim_{s\to1^+}f(s)=\left[ \frac{1-\frac{1}{e}}{0^+} \right]=+\infty\]
         \[\lim_{s\to0^-}f(s)=\lim_{s\to 0}\frac{e^s-1}{s(s+1)}\stackrel{LN}{=}1\]
@@ -49,15 +65,13 @@ CdL in Matematica – a.a. 2022–2023}
         \item Derivata di $f$
         \[f'(s)=\begin{cases}
             \frac{-e^{-s}(s^2+3s+1)+(2s+1)}{s^2(s+1)^2}&\se s>0\\
-            \frac{e^{s}(s^2-s-1)+(2s+1)}{s^2(s+1)^2}&\se s<0\\
+            \frac{e^{s}(s^2-s-1)+(2s+1)}{s^2(s+1)^2}&\se s<0 \land s \neq - 1\\
         \end{cases}\]
         \begin{itemize}
             \item se $s>0$
-            \[f'(s)<0~~\Harr~~-e^{-s}(s^2+3s+1)+(2s+1)>0~~\Harr~~\frac{s^2+3s+1}{2s+1}<e^s=\sum_{n=0}^{+\infty}\frac{s^n}{n!}~~\Harr\]
-            In quanto il denominatore è sempre positivo. Effettuando la divisione tra i polinomi
-            \[\Harr~~\sum_{n=0}^{+\infty}\frac{s^n}{n!}+\frac{s^2}{2}+\frac{s^2}{2s+1}>0~~\forall s>0\]
-            In quanto somma di quantità positive.
-            \item se $s<0$ studiamo separatamente i due casi
+            \[f'(s) >0~~\Harr~~-e^{-s}(s^2+3s+1)+(2s+1)>0~~\Harr~~\frac{s^2+3s+1}{2s+1}<e^s\]
+            Ora basta osservare ceh $e^s>s+1>\frac{s^2+3s+1}{2s+1}$.
+            \item se $s<0 \land s\neq -1$ studiamo separatamente i due casi
             \begin{itemize}
                 \item $-1<s<0$
                 \[f'(s)<0~~\Harr~~e^s(s^2-s-1)+(2s+1)<0\]
