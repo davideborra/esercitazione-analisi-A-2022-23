@@ -32,10 +32,10 @@ Osserviamo che ogni soluzione $y$ sarà $y(x)\neq 0 ~\forall x$. Allora
 \[y'=-\frac{x}{y}~ ~ \Harr ~~ y'y=- x\]
 Abbiamo un'equazione differenziale a variabili separabili. Integrando si ha 
 \[\int y'y\d x=-\int x \d x~~~\Harr~~~\int y\d y =-\int x \d x~~\Harr~~~\frac{1}{2}y^2=-\frac{1}{2}x^2+c~~~\Harr\]
-\[\Harr~~~y(x)=\sqrt{-x^2+c}~~\lor~~ y=-\sqrt{-x^2+c}~~~\text{con}~-\sqrt{c}\leq x\leq \sqrt{c},~ ~ c\geq 0\]
+\[\Harr~~~y(x)=\sqrt{-x^2+c}~~\lor~~ y=-\sqrt{-x^2+c}~~~\text{con}~-\sqrt{c}\leq x\leq \sqrt{c},~ ~ c\geq 0.\]
 Per risolvere il problema di Cauchy impongo $y(0)=1$, quindi
-\[\pm\sqrt{c}=1\implies c=1\]
-Scegliendo la soluzione con segno positivo (deve soddisfare $y(0)=1>0$), per cui la soluzione al problema di Cauchy dato è la funzione $y:]-1,1[\to \R~~~y(x)=\sqrt{1-x^2}$
+\[\pm\sqrt{c}=1\implies c=1.\]
+Scegliamo la soluzione con segno positivo (deve soddisfare $y(0)=1>0$), per cui la soluzione al problema di Cauchy dato è la funzione $y:]-1,1[\to \R~~~y(x)=\sqrt{1-x^2}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Determinare l'integrale generale di 
 \[
@@ -44,17 +44,17 @@ Scegliendo la soluzione con segno positivo (deve soddisfare $y(0)=1>0$), per cui
 e risolvere il problema di Cauchy
 \[\begin{cases}
     (x^2+1)y'+y^2=0 \\
-    y(0)=1
+    y(0)=1.
 \end{cases}\]
 \item[\textit{\large Soluzione~}]~ Dobbiamo riportarci alla forma $\frac{y'}{g(y)}=h(x)$, ma per farlo dobbiamo poter dividere per $y$. Cerchamo quindi le soluzioni banali: Supponiamo $y$ costante, allora $y'=0$, di conseguenza
 \[y^2\equiv 0~~\Harr~~y\equiv 0\]
 Abbiamo che $y=0$ è soluzione dell'equazione differenziale data, ma non soluzione del problema di Cauchy. Tutte le altre soluzioni non si annullano mai per il teorema di Cauchy.\\
 Possiamo quindi procedere
 \[\frac{y'}{y}=-\frac{1}{1+x^2}~~~\Rarr~~~\int\frac{y'}{y^2}\d x=-\int\frac{1}{1+x^2}\d x~~~\Harr~~~\int\frac{1}{y^2}\d y=-\arctg x+c~~~\Harr\]
-\[-\frac{1}{y}=-\arctg x +c~~~\Harr~~~y(x)=\frac{1}{\arctg x +c}~~~~y: \R\setminus \{\tg c\}\to \R\]
+\[-\frac{1}{y}=-\arctg x +c~~~\Harr~~~y(x)=\frac{1}{\arctg x +c}~~~~y: \R\setminus \{\tg c\}\to \R.\]
 
 Per risolvere il PdC imponiamo la condizione iniziale.
-\[1=\frac{1}{\arctg 0 +c}~~~\Harr~~~c=1~~\implies~~y(x)=\frac{1}{\arctg x +1} \text{ con }x\in \R\setminus \{\tg (-1)\}\]
+\[1=\frac{1}{\arctg 0 +c}~~~\Harr~~~c=1~~\implies~~y(x)=\frac{1}{\arctg x +1} \text{ con }x\in \R\setminus \{\tg (-1)\}.\]
 Siccome la soluzione al problema di Cauchy è definita su un intervallo, che deve contenere lo $0$ e $\tg (-1)<0$, scelgo l'intervallo $x>\tg(-1)$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Trovare l'integrale generale di 
@@ -66,7 +66,7 @@ e risolvere i problemi di Cauchy con
     \task $y(0)=1$ \task $y(0)=-1$.
 \end{tasks}
 \item[\textit{\large Soluzione~}]~ Troviamo la soluzione banale $y=0$, quindi è lecito assumere per le altre soluzioni $y\neq 0$
-\[\int \frac{y'}{y^2}\d x=\int x \d x~~~\Harr~~~-\frac{1}{y}=\frac{x^2}{2}+c~~~\Harr~~~y=-\frac{2}{x^2+2c}\]
+\[\int \frac{y'}{y^2}\d x=\int x \d x~~~\Harr~~~-\frac{1}{y}=\frac{x^2}{2}+c~~~\Harr~~~y=-\frac{2}{x^2+2c}.\]
 Per determinare il dominio dobbiamo separare i tre casi
 \[\dom y=\begin{cases}
     \R &\se c>0\\
@@ -86,7 +86,7 @@ Infine
 \begin{lineframe}
     \paragraph*{Ricorda} In generale, data l'equazione differenziale $y'=a(x)y+b(x)$ con $a(x),b(x)\in \mathcal{C}^0(I)$, $I$ intervallo, il suo integrale generale è una funzione del tipo 
     \[y(x)=e^{A(x)}\left( c+\int b(x)e^{-A(x)}\d x \right),\]
-    dove $A(x)=\int a(x)\d x$
+    dove $A(x)=\int a(x)\d x$.
 \end{lineframe}
 
 \begin{enumerate}[label=\textbf{Esercizio 13.\arabic*.},itemindent=*]
@@ -95,7 +95,7 @@ Infine
 \item Risolvere il seguente problema di Cauchy
 \[\begin{cases}
     y'-y=1\\
-    y(0)=0
+    y(0)=0.
 \end{cases}\]
 \item[\textit{\large Soluzione~}]~Riscriviamo l'equazione differenziale nella forma $y'=a(x)y+b(x)$, dove $a(x)=1$ e $b(x)=1$. Poichè
 $A(x)=\int1\d x=x$, la formula sopra ci dà
@@ -107,18 +107,18 @@ Impongo la condizione $y(0)=0$. Allora
 \item Risolvere il seguente problema di Cauchy
 \[\begin{cases}
     y'=\left( \sin x \right)y+\sin(2x)\\
-    y(0)=-2
+    y(0)=-2.
 \end{cases}\]
 \item[\textit{\large Soluzione~}]~ Abbiamo un'equazione differenziale lineare del 1° ordine con $a(x)=\sin x$ e $b(x)=\sin (2x)$. Ora
-\[a(x)=\sen x~~~\implies~~~A(x)=\int a(x)\d x=\int \sen x \d x=-\cos x\]
+\[a(x)=\sen x~~~\implies~~~A(x)=\int a(x)\d x=\int \sen x \d x=-\cos x.\]
 L'integrale generale si ricava quindi da 
 \[y(x)=e^{ -\cos x}\left( c+\int \sin (2x) e^{\cos x} \d x \right).\]
 Ora
 \[\int \sen(2x)e^{\cos x}\d x=\int 2\cos x \sin x e^{\cos x}\d x.\]
 Pongo $t=\cos x$, quindi $\d t=-\sin x \d x$;
-\[\int_2\cos x \sin xe^{\cos x}\d x \underset{t =\cos x}{= } -2\int te^t\d t=-2\left( te^t-\int e^t\d t \right)=-2\left(te^t-e^t\right)=-2e^{\cos x}\cos x+2e^{\cos x}\]
+\[\int 2\cos x \sin xe^{\cos x}\d x \underset{t =\cos x}{= } -2\int te^t\d t=-2\left( te^t-\int e^t\d t \right)=-2\left(te^t-e^t\right)=-2e^{\cos x}\cos x+2e^{\cos x}\]
 Allora l'integrale generale dell'equazione è
-\[y(x)=e^{-\cos x}\left( c+2e^{\cos x}-2\cos xe^{\cos x} \right)=ce^{-\cos x}+2-2\cos x, c\in \R\]
+\[y(x)=e^{-\cos x}\left( c+2e^{\cos x}-2\cos xe^{\cos x} \right)=ce^{-\cos x}+2-2\cos x,\quad c\in \R.\]
 Imponiamo le condizioni $y(0)=-2$ e otteniamo
 \[ce^{-1}=-2~~~\Harr~~~c=-2e .\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -129,7 +129,7 @@ Imponiamo le condizioni $y(0)=-2$ e otteniamo
 \end{cases}\]
 \item[\textit{\large Soluzione~}]~
 Cerchiamo la soluzione banale. Se $y'\equiv 0$, allora $y\equiv 0$. Essa è soluzione del problema di Cauchy se $\lambda=0$.
-Per trovare le altre soluzioni è quindi lecito assumere $y\not\equiv 0$ e $\lambda \neq 0$.
+Per trovare le altre soluzioni è quindi lecito assumere $y\neq 0~ \forall x \in \R$ e $\lambda \neq 0$.
 Abbiamo
 
 \[\frac{y'}{y^2}=x\log x^2\]

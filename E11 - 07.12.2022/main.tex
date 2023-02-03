@@ -99,23 +99,23 @@ Di conseguenza
     \end{cases}.\]
     Quindi
     \[2\int_3^4dt-4\int_3^4 \frac{1}{t^2-3t+2}dt=2- 4\left( \int_3^4\frac{1}{t-2}dt -\int_3^4\frac{1}{t-1}dt\right)=2-4\left[ \log|t-2| -\log|t-1|\right]_3^4=\]\[=2-4\log2+4\log3-4\log2=2+4\log\frac{3}{4}.\]
-    \task \(\int_{0}^{e-\frac{1}{e}}\sqrt{4 +x^2}dx\)
+    \task \(\int_{0}^{e-\frac{1}{e}}\sqrt{4 +x^2}dx\)\\
     Quando si presentano situazioni del genere è utile sostituire applicando le relazioni tra seno e coseno o tra seno e coseno iperbolici. In particolare se si presenta $\sqrt{1-x^2}$ è utile sostituire ricordando che $\cos^2x+\sen^2x=1$, mentre se si presenta $\sqrt{1+x^2}$ è utile sostituire ricordando che $\cosh^2x-\senh^2x=1$. In questo caso sostituiamo $x=2\sinh t$, quindi $dx=2\cosh t dt$. Di conseguenza gli estremi di integrazione diventano $t_0=0$ e $t_1=1$.
     \[
     \begin{aligned}
-        \int_{0}^{e-\frac{1}{e}}\sqrt{4-x^2}dx&= 4\int_0^1\sqrt{4+4\senh^2t}\cdot 2\cosh tdt=4\int_0^1\sqrt{\cosh^2t}\cosh t dt=\int_0^1\cosh^2 tdt=\\&=4\int_0^1\cosh t\cosh t dt=4\left( \biggl[ \sinh t\cosh t \biggr]_0^1-\int_0^1\senh^2tdt \right)=\\&=4\int_0^1\cosh t\cosh t dt=4\left( \biggl[ \sinh t\cosh t \biggr]_0^1-\int_0^1(\cosh^2t-1)dt \right)=\\&=4\left( \biggl[\senh t\cosh t\biggr]_0^1+\int _0^1dt-\int_0^1\cosh^2tdt \right).
+        \int_{0}^{e-\frac{1}{e}}\sqrt{4 +x^2}dx&= 4\int_0^1\sqrt{4+4\senh^2t}\cdot 2\cosh tdt=4\int_0^1\sqrt{\cosh^2t}\cosh t dt= 4\int_0^1\cosh^2 tdt=\\&=4\int_0^1\cosh t\cosh t dt=4\left( \biggl[ \sinh t\cosh t \biggr]_0^1-\int_0^1\senh^2tdt \right)=\\&=4\int_0^1\cosh t\cosh t dt=4\left( \biggl[ \sinh t\cosh t \biggr]_0^1-\int_0^1(\cosh^2t-1)dt \right)=\\&=4\left( \biggl[\senh t\cosh t\biggr]_0^1+\int _0^1dt-\int_0^1\cosh^2tdt \right).
     \end{aligned}\]
    Risulta quindi 
     \[8\int_0^1\cosh^2tdt=4\biggl[\senh t\cosh t +t\biggr]_0^1.\]
    Concludiamo
-    \[\begin{aligned}\int_{0}^{e +\frac{1}{e}}\sqrt{4 +x^2}\d x &= 4\int_0^1\cosh^2t\d t 2\biggl[\senh t\cosh t +t\biggr]_0^1=2\left( \frac{e-\frac{1}{e}}{2} \cdot \frac{1
-    e+\frac{1}{e}}{2} +1\right)= \\&=\frac{e^2 - e^{ - 2}}{2} + 2 = \sinh 2 + 2\end{aligned}\]
+    \[\begin{aligned}\int_{0}^{e +\frac{1}{e}}\sqrt{4 +x^2}\d x &= 4\int_0^1\cosh^2t\d t = 2\biggl[\senh t\cosh t +t\biggr]_0^1=2\left( \frac{e-\frac{1}{e}}{2} \cdot \frac{
+    e+\frac{1}{e}}{2} +1\right)= \\&=\frac{e^2 - e^{ - 2}}{2} + 2 = \sinh 2 + 2.\end{aligned}\]
     \task \(\int\frac{1}{1+\sin x}dx\)\\
     Per risolvere questo tipo di integrale bisogna utilizzare le formule parametriche di seno e coseno: sia $t=\tg\frac{x}{2}$, allora si ha $\sin x= \frac{2t}{1+t^2}$ e $\cos x= \frac{1-t^2}{1+t^2}$. Inoltre $x=2\arctg t$ e $dx =\frac{2}{1+t^2}dt$. 
     Infatti
-    \[\frac{2t}{1+t^2}=\frac{2\tg\frac{x}{2}}{1+\tg^2\frac{x}{2}}=\frac{2\frac{\sin \frac{x}{2}}{\cos \frac{x}{2}}}{1+\frac{\sin ^2\frac{x}{2}}{\cos^2 \frac{x}{2}}}=\frac{2\sin \frac{x}{2}\cos \frac{x}{2}}{\cos^2\frac{x}{2}+\sin^2 \frac{x}{2}}=\sin x\]
+    \[\frac{2t}{1+t^2}=\frac{2\tg\frac{x}{2}}{1+\tg^2\frac{x}{2}}=\frac{2\frac{\sin \frac{x}{2}}{\cos \frac{x}{2}}}{1+\frac{\sin ^2\frac{x}{2}}{\cos^2 \frac{x}{2}}}=\frac{2\sin \frac{x}{2}\cos \frac{x}{2}}{\cos^2\frac{x}{2}+\sin^2 \frac{x}{2}}=\sin x.\]
     Di conseguenza
-    \[\begin{aligned}\int\frac{1}{1+\sin x}dx&\underset{t = \tg \frac{x}{2}}{=}\int\frac{1}{\frac{2t}{1+t^2}+1}\cdot \frac{2}{1+t^2}dt=\int \frac{2\cancel{(1+t^2)}}{(2t+1+t^2)\cancel{(1+t^2)}}dt=\\&=\int \frac{2}{(1+ t)^2}dt=-\frac{2}{1+ t}+c\bigg|_{t =\tg\frac{x}{2}}=-\frac{2}{1+\tg \frac{x}{2}}+ c\end{aligned}\]
+    \[\begin{aligned}\int\frac{1}{1+\sin x}dx&\underset{t = \tg \frac{x}{2}}{=}\int\frac{1}{\frac{2t}{1+t^2}+1}\cdot \frac{2}{1+t^2}dt=\int \frac{2\cancel{(1+t^2)}}{(2t+1+t^2)\cancel{(1+t^2)}}dt=\\&=\int \frac{2}{(1+ t)^2}dt=-\frac{2}{1+ t}+c\bigg|_{t =\tg\frac{x}{2}}=-\frac{2}{1+\tg \frac{x}{2}}+ c.\end{aligned}\]
 \end{tasks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Studiare la convergenza di $\int_0^1\frac{\sin x}{\sqrt{x}\sqrt[4]{1-x}}dx$.
@@ -132,7 +132,7 @@ Di conseguenza l'integrale dato converge se e solo se $-\beta<\alpha<1$.
 
 
 Calcoliamo ora il valore dell'integrale nel caso $\alpha=\frac{1}{2}$ e $\beta=0$:
-\[\begin{aligned}\int_0^{+\infty}\frac{1}{\sqrt{x}(4+9x)}dx&=\int_0^1\frac{1}{\sqrt{x}(4+9x)}dx+\int_1^{+\infty}\frac{1}{\sqrt{x}(4+9x)}dx=\\&=\lim_{\delta\to {0^+}}\int_\delta^1\frac{1}{\sqrt{x}(4+9x)}dx+\lim_{h\to {+\infty}}\int_1^{h}\frac{1}{\sqrt{x}(4+9x)}dx\end{aligned}.\]
+\[\begin{aligned}\int_0^{+\infty}\frac{1}{\sqrt{x}(4+9x)}dx&=\int_0^1\frac{1}{\sqrt{x}(4+9x)}dx+\int_1^{+\infty}\frac{1}{\sqrt{x}(4+9x)}dx=\\&=\lim_{\delta\to {0^+}}\int_\delta^1\frac{1}{\sqrt{x}(4+9x)}dx+\lim_{h\to {+\infty}}\int_1^{h}\frac{1}{\sqrt{x}(4+9x)}dx.\end{aligned}\]
 Per procedere al calcolo ci serve una primitiva di $f$. Sostituiamo ponendo $t=\sqrt{x}$, $x=t^2$, $dx=2tdt$.
 \[\begin{aligned}
     \int\frac{1}{\sqrt{x}(4+9x)}dx&=\int\frac{1}{t(4+9t^2)}2tdt=2\int\frac{1}{4+9t^2}dt=\frac{1}{3}\int\frac{\frac{3}{2}}{1+\frac{9}{4}t^2}dt=\frac{1}{3}\arctg\left(\frac{3}{2}t\right)+c=\\&=\frac{1}{3}\arctg\left(\frac{3}{2}\sqrt{x}\right)+c
@@ -142,23 +142,23 @@ Quindi
     \int_0^{+\infty}\frac{1}{\sqrt{x}(4+9x)}dx&=
     \lim_{\delta\to {0^+}}\int_\delta^1\frac{1}{\sqrt{x}(4+9x)}dx+\lim_{h\to {+\infty}}\int_1^{h}\frac{1}{\sqrt{x}(4+9x)}dx=\\&=
     \lim_{\delta\to {0^+}}\biggl[\frac{1}{3}\arctg\left( \frac{3}{2} \sqrt{x}\right)\biggr]_\delta^1+\lim_{h\to {+\infty}}\biggl[\frac{1}{3}\arctg\left( \frac{3}{2} \sqrt{x}\right)\biggr]_1^{h}=\\&=
-    \lim_{\delta\to {0^+}}\biggl[\frac{1}{3}\arctg\frac{3}{2}-\frac{1}{3}\arctg\left( \frac{3}{2} \sqrt{\delta}\right)\biggr]+\lim_{h\to {+\infty}}\biggl[\frac{1}{3}\arctg\left( \frac{3}{2} \sqrt{h}\right)-\frac{1}{3}\arctg\frac{3}{2}\biggr]=\frac{\pi}{6}
+    \lim_{\delta\to {0^+}}\biggl[\frac{1}{3}\arctg\frac{3}{2}-\frac{1}{3}\arctg\left( \frac{3}{2} \sqrt{\delta}\right)\biggr]+\lim_{h\to {+\infty}}\biggl[\frac{1}{3}\arctg\left( \frac{3}{2} \sqrt{h}\right)-\frac{1}{3}\arctg\frac{3}{2}\biggr]=\frac{\pi}{6}.
 \end{aligned}\]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item Studiare la convergenza di $\int_1^2\frac{1-\cos (x-1)}{(x^2-1)^\alpha(2-x)^{3-\alpha}}dx$ al variare di $\alpha \in \R$
+\item Studiare la convergenza di $\int_1^2\frac{1-\cos (x-1)}{(x^2-1)^\alpha(2-x)^{3-\alpha}}dx$ al variare di $\alpha \in \R$.
 \item[\textit{\large Soluzione~}]~Riscriviamo l'integrale equivalentemente e sostituiamo $x-1=t$, $t=x+1$, $dx=dt$
 \[\int_1^2\frac{1-\cos (x-1)}{(x^2-1)^\alpha(2-x)^{3-\alpha}}dx=\int_1^2\frac{1-\cos (x-1)}{(x-1)^\alpha(x+1)^\alpha(2-x)^{3-\alpha}}dx=\int_0^1\frac{1-\cos t}{(t)^\alpha(t+2)^\alpha(1-t)^{3-\alpha}}dt\]
-Chiamiamo $f(t)$ la funzione integranda
+Chiamiamo $f(t)$ la funzione integranda.
 \begin{itemize}
     \item Per $t\to0^+$
-    \[f(t)\sim\frac{1-\cos t}{t^\alpha}\cdot\frac{1}{2^\alpha}\]
+    \[f(t)\sim\frac{1-\cos t}{t^\alpha}\cdot\frac{1}{2^\alpha}.\]
     Sviluppiamo il coseno
-    \[\frac{1-\cos t}{t^\alpha}=\frac{\frac{t^2}{2}+o(t^2)}{t^{\alpha}}\sim \frac{1}{2t^{\alpha - 2}}\]
+    \[\frac{1-\cos t}{t^\alpha}=\frac{\frac{t^2}{2}+o(t^2)}{t^{\alpha}}\sim \frac{1}{2t^{\alpha - 2}}.\]
     L'integrale converge se e solo se $\alpha-2<1~~\Harr~~\alpha<3$.
     \item Per $t\to1^-$ osserviamo che $1-\cos t$, $t^\alpha$ e $(t+2)^\alpha$ non influiscono se non per costanti, quindi a meno di costanti
     \[f(t)\sim \frac{1}{(1-t)^{3-\alpha}}\]
-    e l'integrale $\int_{\frac{1}{2}}^tf(t)dt$ converge se e solo se $3-\alpha <1~~\Harr~~\alpha>2$.
+    e l'integrale $\int_{\frac{1}{2}}^1f(t)dt$ converge se e solo se $3-\alpha <1~~\Harr~~\alpha>2$.
 \end{itemize}
 Di conseguenza l'integrale converge se e solo se 
 \[2<\alpha<3.\]

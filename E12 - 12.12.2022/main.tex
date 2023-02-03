@@ -97,7 +97,7 @@ CdL in Matematica – a.a. 2022–2023}
     \begin{itemize}
         \item se $x \in ]0,+\infty[$
         \[f(s)\underset{s\to0^+}{\longrightarrow}- 1\]
-        e la funzione è continua in $]0,+\infty[$, per cui $f\in \mathcal{R}([0,\omega]), \forall \omega >0$, e quindi $f\in \mathcal{R}(]0,+\infty[)\subset \dom F$
+        e la funzione è continua in $]0,+\infty[$, per cui $f\in \mathcal{R}([0,\omega]), \forall \omega >0$, e quindi $]0,+\infty[\subset \dom F$.
         \item se $x\in]-1,0[$\\
         $f(s)$ è continua in $]-1,0[$ e $f(s)\underset{s\to0^-}{\longrightarrow}1$, per cui $f\in \mathcal{R}([a,0])~\forall a\in ~]-1,0[$.
         Dobbiamo controllare se l'integrale converge in $-1$
@@ -146,7 +146,7 @@ Ricordiamo la definizione di convessità
         \item \say{$\Rightarrow$}\\
         Prendo $x \in [x_1,x_2]$, allora posso scrivere $x=\lambda x_1+(1-\lambda)x_2$, con $\lambda\in[0,1]$
         \[\begin{aligned}f(x)&=f(\lambda x_1+(1-\lambda)x_2)\leq f(x_1) +\frac{f(x_2)-f(x_1)}{x_2-x_1}(\lambda x_1 +(1-\lambda )x_2-x_1) =\\
-        &=f(x_1) +\frac{f(x_2)-f(x_1)}{\cancel{x_2-x_1}}(1-\lambda)\cancel{(x_2-x_1)} = f(x_1) + \left( f(x_2) - f(x_1) \right)(1 -\lambda) =\\&= \lambda f(x_1)+(1-\lambda)f(x_2)\end{aligned}\]
+        &=f(x_1) +\frac{f(x_2)-f(x_1)}{\cancel{x_2-x_1}}(1-\lambda)\cancel{(x_2-x_1)} = f(x_1) + \left( f(x_2) - f(x_1) \right)(1 -\lambda) =\\&= \lambda f(x_1)+(1-\lambda)f(x_2).\end{aligned}\]
         \item \say{$\Leftarrow$}\\Prendo $x \in [x_1,x_2]$, allora posso scrivere $x=\frac{x_2-x}{x_2-x_1}x_1+\frac{x-x_1}{x_2-x_1}x_2$. Pongo $\lambda:=\frac{x_2-x}{x_2-x_1}\in[0,1]$. Allora $1-\lambda=\frac{x-x_1}{x_2-x_1}\in [0,1]$
         \[f(x)\leq \lambda f(x_1)+(1-\lambda)f(x_2)=\frac{x_2-x}{x_2-x_1}f(x_1)+\frac{x-x_1}{x_2-x_1}f(x_2)\]
         \[\implies f(x)\leq f(x_1) + (\frac{x_2-x}{x_2-x_1}-1)f(x_1)+\frac{x-x_1}{x_2-x_1}f(x_2) = f(x_1) +\frac{f(x_2) - f(x_1)}{x_2 - x_1}(x - x_1).\]
@@ -155,7 +155,7 @@ Ricordiamo la definizione di convessità
 \item Provare che $f(x)=x^2$ è strettamente convessa.
 \item[\textit{\large Soluzione~}]~
 \begin{proof} Dobbiamo provare che
-    \[f(\lambda x_1+(1-\lambda)x_2)<\lambda f(x_1)+(1-\lambda)f(x_2)~~~~~\forall \lambda \in [0,1]\quad \forall x_1,x_2\in \R, x_1\neq x_2. \]
+    \[f(\lambda x_1+(1-\lambda)x_2)<\lambda f(x_1)+(1-\lambda)f(x_2)~~~~~\forall \lambda \in ]0,1[\quad \forall x_1,x_2\in \R, x_1\neq x_2. \]
     Osserviamo che 
     \[(\lambda x_1+(1-\lambda)x_2)^2<\lambda x_1^2+(1-\lambda)x^2_2~~\Harr\]
     \[x_1^2\lambda(\lambda-1)+x_2^2((1-\lambda)^2-(1-\lambda))+2\lambda(1-\lambda)x_1x_2<0~~\Harr\]
@@ -164,17 +164,17 @@ Ricordiamo la definizione di convessità
     che è verificato $\forall \lambda \in ]0,1[, \forall x_1,x_2\in \R, x\neq x_1$.
 \end{proof}
 \item Dimostrare che $\forall a,b\geq 0, \forall p\in\R, p\geq 1$ vale
-\[(a+b)^p\leq 2^{p-1}(a^p+b^p)\]
+\[(a+b)^p\leq 2^{p-1}(a^p+b^p).\]
 \item[\textit{\large Soluzione~}]~
 \begin{proof} 
     Per $p=1$ la proprietà è ovvia. Se $a=0$ o $b=0$ la disuguaglianza è soddisfatta. Siano $a,b>0$, $p>1$. Pongo $f(t)=t^p$, che è una funzione convessa su $[0,+\infty[$ poiché $f''(t)=p(p-1)t^{p-2}>0$ su $]0,+\infty[$.Scelgo inoltre $x_1=a$ e $x_2=b$. Nella definizione precedente dell'Esercizio 12.2, si ha 
     \[(\lambda a +(1-\lambda)b)^p\leq \lambda a^p+(1-\lambda)b^p\]
     Scegliendo $\lambda=\frac{1}{2}$ si ottiene
-    \[\left( \frac{1}{2} \right)^p(a+b)^p\leq \left( \frac{1}{2} \right)(a^p+b^p)\]
+    \[\left( \frac{1}{2} \right)^p(a+b)^p\leq \left( \frac{1}{2} \right)(a^p+b^p).\]
     e quindi
     \[(a+b)^p\leq 2^{p-1}(a^p+b^p).\]
 \end{proof}
-\item Sia $f:\R\to\R$ derivabile, si dimostri che $f$ è convessa se e solo se \[f(x)\geq f(y)+f'(y)(x-y).\]
+\item Sia $f:\R\to\R$ derivabile, si dimostri che $f$ è convessa se e solo se $\forall y \in \R$ \[f(x)\geq f(y)+f'(y)(x-y),\qquad \forall x \in \R .\]
 \item[\textit{\large Soluzione~}]~
 \begin{proof}
     %Per quanto detto prima, 
@@ -200,27 +200,27 @@ Ricordiamo la definizione di convessità
 \[ab\leq \frac{a^p}{p}+\frac{b^q}{q}.\]
 \item[\textit{\large Soluzione~}]~
 \begin{proof}
-    Il caso $a=0$ o $b=0$ è banale, mentre il caso $p,q=2$ segue dal quadrato di binomio. Siano $f(t)=\log(t)$, e $t_1=a^p, t_2=b^q, \lambda =\frac{1}{p}, 1-\lambda=1-\frac{1}{p}=\frac{1}{q}$.
+    Il caso $a=0$ o $b=0$ è banale, mentre il caso $p,q=2$ segue dal quadrato di binomio. Siano allora $a,b>0$.Siano $f(t)=\log(t)$, e $t_1=a^p, t_2=b^q, \lambda =\frac{1}{p}, 1-\lambda=1-\frac{1}{p}=\frac{1}{q}$.
     Allora sfruttando il fatto che la funzione $f$ è concava possiamo scrivere
-    \[\log\left( \frac{a^p}{p}+\frac{b^q}{q} \right)\geq \frac{1}{p}\log(a^p)\cdot\frac{1}{q}\log(b^q)\]
+    \[\log\left( \frac{a^p}{p}+\frac{b^q}{q} \right)\geq \frac{1}{p}\log(a^p) +\frac{1}{q}\log(b^q)\]
     da cui
     \[\log\left( \frac{a^p}{p}+\frac{b^q}{q} \right)\geq \log(a)+\log(b)=\log(ab)\]
     ne segue che 
-    \[\frac{a^p}{p}+\frac{b^q}{q}ab\geq ab\]
+    \[\frac{a^p}{p}+\frac{b^q}{q}\geq ab.\]
 \end{proof}
 \item \underline{\textit{Disuguaglianza di Hölder.}} \\Siano $p, q\in ]1;+\infty[$ tali che $\frac{1}{p}+\frac{1}{q}=1$. Dimostrare che $\forall (a_1, \dots, a_n), (b_1,\dots, b_n)\in \R^n$ con $a_i, b_i\geq 0~\forall i$ vale che 
-\[\sum_{i=1}^n a_ib_i\leq \left(\sum_{i=1}^na_i^p\right)^{\frac{1}{p}}+\left(\sum_{i=1}^nb_i^q\right)^{\frac{1}{q}}\]
+\[\sum_{i=1}^n a_ib_i\leq \left(\sum_{i=1}^na_i^p\right)^{\frac{1}{p}}\cdot\left(\sum_{i=1}^nb_i^q\right)^{\frac{1}{q}}\]
 \item[\textit{\large Soluzione~}]~
 \begin{proof}
    Se $a_i=0~\forall i$ oppure $b_i=0~\forall i$ la disuguaglianza è ovvia. Supponiamo che $a_i\neq 0$ per qualche $i$ e $b_i\neq 0$ per qualche $i$. Poniamo $x_i=\frac{a_i}{\left(\sum\limits_{i=1}^na_i^p\right)^{\frac{1}{p}}}$ e $y_i=\frac{b_i}{\left(\sum\limits_{i=1}^nb_i^q\right)^{\frac{1}{q}}}$, allora segue che $x_i,y_i\geq 0~\forall i$.
    \\Per la disuguaglianza di Young $\forall i=1, \dots, n$ si ha
-   \[x_iy_i\leq \frac{1}{p}x_i^p+\frac{1}{q}y_i^q\]
+   \[x_iy_i\leq \frac{1}{p}x_i^p+\frac{1}{q}y_i^q.\]
    Quindi 
-   \[\sum\limits_{i=1}^nx_iy_i\leq\sum\limits_{i=1}^n\left( \frac{1}{p}x_i^p+\frac{1}{q}y_i^q\right)=\frac{1}{p}\frac{\sum\limits_{i=1}^na_i^p}{\sum\limits_{i=1}^na_i^p}+\frac{1}{q}\frac{\sum\limits_{i=1}^nb_i^q}{\sum\limits_{i=1}^nb_i^q}=1\]
+   \[\sum\limits_{i=1}^nx_iy_i\leq\sum\limits_{i=1}^n\left( \frac{1}{p}x_i^p+frac{1}{q}y_i^q\right)=\frac{1}{p}\frac{\sum\limits_{i=1}^na_i^p}{\sum\limits_{i=1}^na_i^p}+\frac{1}{q}\frac{\sum\limits_{i=1}^nb_i^q}{\sum\limits_{i=1}^nb_i^q}=1.\]
    Da
    \[\sum_{i = 1}^nx_iy_i =\sum_{i = 1}^n\frac{a_i}{(\sum_{j = 1}^n a_j^p)^{\frac{1}{p}}}\frac{b_i}{(\sum_{j = 1}^n b_j^q)^{\frac{1}{q}}}\leq 1\]
    segue allora
-   \[\sum_{i=1}^n a_ib_i\leq \left(\sum_{i=1}^na_i^p\right)^{\frac{1}{p}}+\left(\sum_{i=1}^nb_i^q\right)^{\frac{1}{q}}\]
+   \[\sum_{i=1}^n a_ib_i\leq \left(\sum_{i=1}^na_i^p\right)^{\frac{1}{p}} \cdot \left(\sum_{i=1}^nb_i^q\right)^{\frac{1}{q}}.\]
 \end{proof}
 
 \begin{corollary*}[\underline{Disuguaglianza di Cauchy-Schwarz}]
@@ -245,29 +245,29 @@ dove
    Sfruttando la monotonia dell'integrale, integrando su $[a,b]$, si ha
    \[\int_a^bf(g(x))\d x\geq (b - a)f\left( \fint_a^bg(t)\d t \right) + f'\left( \fint_a^bg(t)\d t \right) \left( \int_a^bg(x)\d x -  \int_a^bg(t)\d t\right), \]
    cioè 
-   \[\int_a^bf(g(x))\d x\geq (b - a)f\left(\fint_a^bg(t)\d t\right)\]
+   \[\int_a^bf(g(x))\d x\geq (b - a)f\left(\fint_a^bg(t)\d t\right).\]
    Dividendo entrambi i membri per $(b-a)$ si ottiene la tesi.
 \end{proof}
 
-\item \underline{\textit{Disuguaglianza di Young generalizzata.}} Siano $p_1, \dots, p_n \in ]1;+\infty[$ tali che $\frac{1}{p_1}+\dots+\frac{1}{p_n}=1$ Dimostrare che 
-\[\prod_{i=1}^na_i\leq \sum_{i=1}^n\frac{a_i^p}{p_i}\qquad \forall (a_1, a_2, \dots, a_n)\in \R^n, a_i\geq 0~\forall i\]
+\item \underline{\textit{Disuguaglianza di Young generalizzata.}} Siano $p_1, \dots, p_n \in ]1;+\infty[$ tali che $\frac{1}{p_1}+\dots+\frac{1}{p_n}=1$. Dimostrare che 
+\[\prod_{i=1}^na_i\leq \sum_{i=1}^n\frac{a_i^p}{p_i}\qquad \forall (a_1, a_2, \dots, a_n)\in \R^n, a_i\geq 0~\forall i.\]
 
 \item[\textit{\large Soluzione~}]~
-
-\begin{proof}
     Definiamo due nuove funzioni: $f(t)=\log(t)$ su $]0,+\infty[$ e $g:[0,1]\to \R$ 
     \[g(t)=\begin{cases}
-        a_1^{p_1} &\se t \in ]x_0, x_1[\\
-        a_2^{p_2} &\se t \in ]x_1, x_2[\\
+        a_1^{p_1} &\se t \in[x_0, x_1[\\
+        a_2^{p_2} &\se t \in [x_1, x_2[\\
         \:\vdots\\
-        a_n^{p_n} &\se t \in ]x_{n-1}, x_n[\\
+        a_n^{p_n} &\se t \in [x_{n-1}, x_n]\\
     \end{cases}\]
     dove $x_0=0<x_1<x_<\dots<x_{n-1}<x_n=1$ e $x_i-x_{i-1}=\frac{1}{p_i}$.\\
     Siccome il logaritmo è una funzione concava, la disuguaglianza di Jensen si scrive $\forall g\in \mathcal{R}([0,1])$ come 
-    \[f\left( \int_0^1 g(x)\d x\right)\geq\int_0^1f(g(x))\d x\]
-    Risulta allora per la funzione definita sopra
+    \[f\left( \int_0^1 g(x)\d x\right)\geq\int_0^1f(g(x))\d x.\]
+    Risulta allora per la funzioni $f$ e $g$ definite sopra
     \[\log\left( \sum_{i=1}^n\frac{a_i^{p_i}}{p_i} \right)\geq \sum_{i=1}^{p_i}\frac{1}{p_i}\log(a_i^{p_i})=\sum_{i=1}^n\log(a_i)=\log{\prod_{i=1}^n}a_i\]
     Passando all'esponenziale si ha la tesi.
-\end{proof}
+\begin{flushright}
+    \qed
+\end{flushright}
 \end{enumerate}
 \end{document}
